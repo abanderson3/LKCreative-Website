@@ -9,11 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customWhite: '#EBF1FA',
-        customGreen: '#90BAAD',
-        customDarkest: '#450920',
-        customSalmon: '#DA627D',
-        customMaroon: '#A53860'
+        customEgg: '#EBF1FA',
+        customMint: '#90BAAD',
+        customPlum: '#450920',
+        customPink: '#DA627D',
+        customRberry: '#A53860'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
