@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import PageTitle from './lib/components/PageTitle'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-customWhite">
-      Home
+    <main className="">
+      <PageTitle title="Home" />
     </main>
   )
 }
