@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lora: ['var(--font-lora)'],
+        josefine: ['var(--font-josefine)']
+      },
       colors: {
         customEgg: '#EBF1FA',
         customMint: '#90BAAD',
