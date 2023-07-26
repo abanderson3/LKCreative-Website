@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 export default function ElevatorPitch() {
 
   return (
-    <main>
+    <main className="flex justify-center">
       <motion.div
-        className=""
+        className="max-w-lg flex text-center justify-center font-josefine font-light "
         animate={{}}
         whileHover={{ scale: 1.2 }}
       >
