@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '128': '32rem',
+      },
       fontFamily: {
         lora: ['var(--font-lora)'],
         josefine: ['var(--font-josefine)']

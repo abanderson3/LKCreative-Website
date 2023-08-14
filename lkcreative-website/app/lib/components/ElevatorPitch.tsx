@@ -6,7 +6,7 @@ export default function ElevatorPitch() {
   return (
     <main className="flex justify-center">
       <motion.div
-        className="max-w-lg flex text-center justify-center font-josefine font-light "
+        className="max-w-lg flex text-center justify-center font-josefine font-light lg:text-2xl lg:max-w-3xl"
         animate={{}}
         whileHover={{ scale: 1.2 }}
       >
