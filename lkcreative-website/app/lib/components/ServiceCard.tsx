@@ -15,7 +15,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({}) => {
     <motion.div
       layout
       className="border border-black rounded-2xl shadow-xl mx-auto snap-always snap-center flex-none h-auto w-36 md:w-60 lg:w-80 "
-      animate={{}}
+      initial={{
+        x:-500,
+        y:-500
+      }}
+      animate={{
+        x:0,
+        y:0
+      }}
     >
 
     </motion.div>
