@@ -10,7 +10,7 @@ const IntroText: React.FC<IntroTextProps> = ({text}) => {
 
   return (
     <main>
-      <div className="flex justify-center py-32">
+      <div className="flex justify-center py-20 md:py-28 lg:py-32">
         <p className="font-josefine text-3xl lg:text-7xl font-light md:text-5xl sm:text-4xl text-center">
           {text}
         </p>

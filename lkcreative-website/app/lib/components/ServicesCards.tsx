@@ -14,7 +14,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
   return (
     <motion.div
       layout
-      className="border flex-col border-black lg:h-128 lg:mt-36 md:h-96 md:mt-24"
+      className="flex flex-nowrap snap-x snap-mandatory no-scrollbar overflow-x-auto h-80 mt-10 lg:h-128 lg:mt-36 md:h-96 md:mt-24 lg:justify-between"
     >
       <ServiceCard/>
       <ServiceCard/>

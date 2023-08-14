@@ -12,7 +12,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({}) => {
   return (
     <motion.div
       layout
-      className="border border-black flex lg:h-auto m-8 "
+      className="border snap-always snap-center border-black flex-none h-auto m-8 w-36 lg:w-80 md:w-60 "
       animate={{}}
     >
 
