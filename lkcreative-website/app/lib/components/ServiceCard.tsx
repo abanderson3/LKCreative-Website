@@ -5,26 +5,27 @@ import React from "react"
 // remake with embla carousel? https://www.embla-carousel.com/get-started/react/
 
 interface ServiceCardProps {
-
+  title: string,
+  description: string
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({}) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({title, description}) => {
 
 
   return (
     <motion.div
       layout
-      className="border border-black rounded-2xl shadow-xl mx-auto snap-always snap-center flex-none h-auto w-36 md:w-60 lg:w-80 "
-      initial={{
-        x:-500,
-        y:-500
-      }}
-      animate={{
-        x:0,
-        y:0
-      }}
+      whileHover={{scale: 1.05}}
+      className="border flex-column border-black bg-customEgg rounded-2xl shadow-xl mx-auto snap-always snap-center flex-none h-auto w-48 lg:w-80 md:w-60"
+      initial={{ opacity: 0, scale: 0, x:-300}}
+      animate={{ opacity: 1, scale: 1, x:0}}
     >
-
+      <div className="border border-black">
+        {title}
+      </div>
+      <div className="border border-black">
+        {description}
+      </div>
     </motion.div>
   )
 }

@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Lora, Josefin_Sans } from 'next/font/google'
 import Navbar from './lib/components/Navbar'
+import Footer from './lib/components/Footer'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={`${lora.variable} ${josefine.variable} font-lora`}>
         < Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
