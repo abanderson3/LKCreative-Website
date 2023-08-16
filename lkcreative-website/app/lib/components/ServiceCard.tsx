@@ -20,10 +20,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({title, description}) => {
       initial={{ opacity: 0, scale: 0, x:-300}}
       animate={{ opacity: 1, scale: 1, x:0 }}
     >
-      <div className="border border-black h-1/3 flex justify-center font-josefine text-center text-xl items-center">
+      <div className="h-1/3 flex shadow-lg justify-center font-josefine text-center text-xl items-center px-2 lg:text-3xl">
         {title}
       </div>
-      <div className="border border-black h-2/3 flex font-josefine items-center justify-center text-center ">
+      <div className=" h-2/3 flex font-josefine items-center justify-center text-center text-xl font-light px-2">
         {description}
       </div>
     </motion.div>

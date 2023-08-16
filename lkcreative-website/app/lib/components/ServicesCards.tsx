@@ -17,7 +17,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
   return (
     <div className=" w-full bg-slate-200">
       <motion.div
-        className=" flex justify-center text-4xl font-light italic font-josefine py-3 mt-8 shadow-lg"
+        className=" flex justify-center text-6xl  italic font-josefine py-3 mt-8 shadow-lg"
       >
         Services
       </motion.div>
@@ -32,7 +32,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
         <ServiceCard title="Social Media Marketing & Growth" description="Let us develop a tailored campaign to boost your brand visibility, drive engagement, and generate leads."/>
         <ServiceCard title="Business Design & Branding" description="From logo design to brand guidelines, we will craft a captivating brand identity that reflects your story and speaks to your audience."/>
         <ServiceCard title="Virtual Assisting" description="Allow us to lighten your workload! Our reliable team can handle administrative tasks, content research, and more so you can focus on the important things."/>
-        <ServiceCard title="Website Design/Development" description="From Wix and Squarespace development to Fullstack custom projects, our team can build you a stunning new website that you can be proud of."/>
+        <ServiceCard title="Web Development" description="From Wix and Squarespace development to Fullstack custom projects, our team can build you a stunning new website that you can be proud of."/>
       </motion.div>
     </div>
 
