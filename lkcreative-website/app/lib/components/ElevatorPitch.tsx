@@ -13,7 +13,7 @@ export default function ElevatorPitch() {
   return (
     <main className="flex justify-center">
       <motion.div
-        className="max-w-xl flex text-center justify-center px-6 pb-3 text-xl leading-6 font-josefine font-light lg:text-2xl lg:max-w-3xl"
+        className="max-w-xl flex text-center justify-center px-6 pb-20 text-xl leading-6 font-josefine font-light lg:text-2xl lg:max-w-3xl"
         animate={{}}
         whileHover={{}}
       >

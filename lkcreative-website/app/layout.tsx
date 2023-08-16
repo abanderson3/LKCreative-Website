@@ -26,11 +26,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
       <body className={`${lora.variable} ${josefine.variable} font-lora`}>
         < Navbar />
         {children}
         <Footer />
       </body>
+
     </html>
   )
 }
