@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({title, description}) => {
       <div className="h-1/3 flex shadow-lg justify-center font-josefine text-center text-xl items-center px-2 lg:text-3xl">
         {title}
       </div>
-      <div className=" h-2/3 flex font-josefine items-center justify-center text-center text-xl font-light px-2">
+      <div className=" h-2/3 flex font-josefine items-center justify-center text-center lg:ext-xl font-light px-2">
         {description}
       </div>
     </motion.div>
