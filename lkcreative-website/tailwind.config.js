@@ -9,6 +9,8 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
+        '100': '28rem',
+        '116': '30rem',
         '128': '32rem',
       },
       fontFamily: {
