@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="">
       {/* <PageTitle title="Home" /> */}
-      <IntroText text="Let us craft your digital" />
+      <IntroText text="Let us craft your digital story" />
       <ElevatorPitch />
       <ServicesCards />
     </main>
