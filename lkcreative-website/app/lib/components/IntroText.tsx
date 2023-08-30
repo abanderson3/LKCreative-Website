@@ -25,7 +25,7 @@ const IntroText: React.FC<IntroTextProps> = ({text}) => {
               1000,
               "Let us craft your digital presence",
               1000,
-              "Let us craft your digital story",
+              "Let us craft your digital story.",
               1000
             ]}
             wrapper="div"
