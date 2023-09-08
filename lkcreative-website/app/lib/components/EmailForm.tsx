@@ -26,6 +26,9 @@ const EmailForm = () => {
 
   return (
   <div className="">
+    <div className="text-center font-josefine text-4xl mt-6 italic font-light">
+      Send us an email
+    </div>
     <form
       onSubmit={onSubmit}
       className="flex flex-col justify-center border border-black m-5 rounded-md"

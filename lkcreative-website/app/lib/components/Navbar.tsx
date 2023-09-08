@@ -1,8 +1,12 @@
 "use client"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Navbar = () => {
+
+
+  // <Image src="/navBurger.svg" alt="navigation" width="64" height="64"/>
 
   const currentRoute = usePathname();
   const selected = 'text-customPlum'

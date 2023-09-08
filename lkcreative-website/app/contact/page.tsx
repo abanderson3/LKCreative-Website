@@ -1,6 +1,7 @@
 import PageTitle from "../lib/components/PageTitle"
 import IntroText from "../lib/components/IntroText"
 import EmailForm from "../lib/components/EmailForm"
+import Survey from "../lib/components/Survey"
 
 export default function Contact({}) {
 
@@ -10,8 +11,12 @@ export default function Contact({}) {
       <div>
         <EmailForm/>
       </div>
-
-
+      <div className="font-josefine font-light text-4xl italic text-center my-4 px-3">
+        Or take our questionnaire below to recieve a detailed quote.
+      </div>
+      <div>
+        <Survey/>
+      </div>
     </main>
   )
 }
