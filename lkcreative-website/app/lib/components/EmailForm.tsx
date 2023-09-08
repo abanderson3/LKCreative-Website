@@ -31,27 +31,30 @@ const EmailForm = () => {
     </div>
     <form
       onSubmit={onSubmit}
-      className="flex flex-col justify-center border border-black m-5 rounded-md"
+      className="flex flex-col justify-center m-5 rounded-md md:w-1/2 md:max-w-3xl md:ml-24"
     >
-      <input
-        required
-        className='border border-black m-2 rounded-md p-2 '
-        type="text"
-        name="first"
-        placeholder="First Name"
-        value={emailForm.first}
-        onChange={handleChange}
-      />
+      <div className="flex flex-col justify-center">
+        <input
+          required
+          className="border border-black m-2 rounded-md p-2"
+          type="text"
+          name="first"
+          placeholder="First Name"
+          value={emailForm.first}
+          onChange={handleChange}
+        />
 
-      <input
-        required
-        className={inputStyling}
-        type="text"
-        name="last"
-        placeholder="Last Name"
-        value={emailForm.last}
-        onChange={handleChange}
-      />
+        <input
+          required
+          className="border border-black m-2 rounded-md p-2"
+          type="text"
+          name="last"
+          placeholder="Last Name"
+          value={emailForm.last}
+          onChange={handleChange}
+        />
+      </div>
+
 
       <input
         required
@@ -75,7 +78,7 @@ const EmailForm = () => {
 
       <textarea
         required
-        className="border border-black m-2 rounded-md p-2 h-28"
+        className="border border-black m-2 rounded-md p-2 h-40"
         name="message"
         placeholder="How can I help?"
         value={emailForm.message}
