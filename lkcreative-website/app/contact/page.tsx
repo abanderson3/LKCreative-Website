@@ -8,9 +8,16 @@ export default function Contact({}) {
 
   return (
     <main className="flex flex-col">
-      <div className="">
-        <EmailForm/>
-      </div>
+        <div className="flex flex-col md:flex-row border border-black">
+          <div className="flex flex-col border border-black md:w-1/3">
+            <div className="text-center font-josefine font-light italic text-4xl mt-6">
+            Where to find us!
+            </div>
+          </div>
+          <EmailForm/>
+
+        </div>
+
       <div className="font-josefine font-light text-4xl italic text-center my-4 px-3 md:max-w-2xl place-self-center">
         Or take our questionnaire below to recieve a detailed quote.
       </div>
