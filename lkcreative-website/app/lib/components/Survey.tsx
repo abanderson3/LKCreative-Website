@@ -39,7 +39,7 @@ const Survey = () => {
             required
             className="border border-black m-2 rounded-md p-2"
             type="text"
-            name="first"
+            name="firstName"
             placeholder="First Name"
             value={surveyData.firstName}
             onChange={handleChange}
@@ -49,9 +49,29 @@ const Survey = () => {
             required
             className="border border-black m-2 rounded-md p-2 text-base"
             type="text"
-            name="last"
+            name="lastName"
             placeholder="Last Name"
             value={surveyData.lastName}
+            onChange={handleChange}
+          />
+
+          <input
+            required
+            className="border border-black m-2 rounded-md p-2 text-base"
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={surveyData.email}
+            onChange={handleChange}
+          />
+
+          <input
+            required
+            className="border border-black m-2 rounded-md p-2 text-base"
+            type="number"
+            name="phoneNumber"
+            placeholder="Phone"
+            value={surveyData.phoneNumber}
             onChange={handleChange}
           />
         </div>
@@ -61,40 +81,41 @@ const Survey = () => {
           2. Who are you?
         </div>
           {/* size of business? */}
+
         </div>
       <div>
         <div className={questionStyle}>
-        3. What social media do you have?
-        </div>
-      </div>
-      <div>
-        <div className={questionStyle}>
-        4. What social media do you want to work on?
+          3. What social media do you have?
         </div>
       </div>
       <div>
         <div className={questionStyle}>
-        5. What level of investment are you comfortable with?
+          4. What social media do you want to work on?
         </div>
       </div>
       <div>
         <div className={questionStyle}>
-        6. What services are you looking for?
+          5. What level of investment are you comfortable with?
         </div>
       </div>
       <div>
         <div className={questionStyle}>
-        7. Who is your target audience?
+          6. What services are you looking for?
         </div>
       </div>
       <div>
         <div className={questionStyle}>
-        8. What kind of content do you prefer to use?
+          7. Who is your target audience?
         </div>
       </div>
       <div>
         <div className={questionStyle}>
-        9. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
+          8. What kind of content do you prefer to use?
+        </div>
+      </div>
+      <div>
+        <div className={questionStyle}>
+          9. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
         </div>
         {/* options for future content and current content */}
       </div>
