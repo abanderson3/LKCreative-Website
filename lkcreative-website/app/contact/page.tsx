@@ -13,6 +13,7 @@ export default function Contact({}) {
           <div className="border border-black flex flex-col md:w-2/5">
             <div className="text-center font-josefine font-light italic text-4xl mt-6">
               Where to find us!
+              {/* Icons: insta, facebook, linkedin */}
             </div>
           </div>
           <EmailForm/>

@@ -51,7 +51,7 @@ const Modal: FC<ModalProps> = ({ handleClose }) => {
         >
           X
         </motion.button>
-        <Survey/>
+        <Survey handleClose={handleClose}/>
       </motion.div>
     </Backdrop>
   )

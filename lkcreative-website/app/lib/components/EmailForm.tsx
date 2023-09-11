@@ -85,6 +85,7 @@ const EmailForm = () => {
         onChange={handleChange}
       />
       <button
+        type="submit"
         className="border border-black rounded-md mx-24 my-3 p-1 font-josefine"
       >
         Send

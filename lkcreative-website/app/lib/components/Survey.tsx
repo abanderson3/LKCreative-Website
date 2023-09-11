@@ -1,7 +1,12 @@
 "use client"
 import { useState, useEffect } from "react"
+import { FC } from "react"
 
-const Survey = () => {
+interface SurveyProps {
+  handleClose: () => void
+}
+
+const Survey: FC<SurveyProps> = ({handleClose}) => {
   const [ surveyData, setSurveyData ] = useState({
     firstName: '',
     lastName: '',
@@ -24,20 +29,27 @@ const Survey = () => {
     }));
   }
 
+  const handleSubmit = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    // logic for sending email with sendgrid
+    handleClose();
+  }
+
   const questionStyle = "my-4 text-xl font-light font-josefine"
 
   return (
     <form
-      className="border border-black flex flex-col justify-center text-center p-4 bg-customEgg rounded-2xl"
+      onSubmit={handleSubmit}
+      className="border border-black flex flex-col justify-center text-center p-10 bg-customEgg rounded-2xl"
     >
       <div>
         <div className={questionStyle}>
           1. Contact Information
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center max-w-xl mx-auto">
           <input
             required
-            className="border border-black m-2 rounded-md p-2"
+            className="border border-black m-1 rounded-md p-2"
             type="text"
             name="firstName"
             placeholder="First Name"
@@ -47,7 +59,7 @@ const Survey = () => {
 
           <input
             required
-            className="border border-black m-2 rounded-md p-2 text-base"
+            className="border border-black m-1 rounded-md p-2 text-base"
             type="text"
             name="lastName"
             placeholder="Last Name"
@@ -57,7 +69,7 @@ const Survey = () => {
 
           <input
             required
-            className="border border-black m-2 rounded-md p-2 text-base"
+            className="border border-black m-1 rounded-md p-2 text-base"
             type="email"
             name="email"
             placeholder="Email"
@@ -67,7 +79,7 @@ const Survey = () => {
 
           <input
             required
-            className="border border-black m-2 rounded-md p-2 text-base"
+            className="border border-black m-1 rounded-md p-2 text-base"
             type="number"
             name="phoneNumber"
             placeholder="Phone"
@@ -124,7 +136,7 @@ const Survey = () => {
         10. What is your level of technical proficiency?
         </div>
       </div>
-      <button className="border border-black rounded-md mx-24 my-3 p-1 font-normal">Submit</button>
+      <button type="submit" className="border border-black rounded-md mx-24 my-3 p-1 font-normal">Submit</button>
     </form>
   )
 }
