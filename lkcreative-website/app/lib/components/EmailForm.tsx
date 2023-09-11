@@ -25,13 +25,13 @@ const EmailForm = () => {
   const inputStyling = 'border border-black m-2 rounded-md p-2'
 
   return (
-  <div className="border border-black w-full">
+  <div className="w-full">
     <div className="text-center font-josefine text-4xl mt-6 italic font-light">
       Send us an email
     </div>
     <form
       onSubmit={onSubmit}
-      className="border border-black flex flex-col m-5 rounded-md md:mx-24 "
+      className=" flex flex-col m-5 rounded-md md:mx-24"
     >
       <div className="flex flex-col justify-center">
         <input

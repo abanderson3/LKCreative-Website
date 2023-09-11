@@ -2,27 +2,28 @@ import PageTitle from "../lib/components/PageTitle"
 import IntroText from "../lib/components/IntroText"
 import EmailForm from "../lib/components/EmailForm"
 import Survey from "../lib/components/Survey"
+import SurveyButton from "../lib/components/SurveyButton"
 
 export default function Contact({}) {
 
 
   return (
     <main className="flex flex-col">
-        <div className="flex flex-col md:flex-row border border-black">
-          <div className="flex flex-col border border-black md:w-1/3">
+        <div className="flex flex-col md:flex-row ">
+          <div className="border border-black flex flex-col md:w-2/5">
             <div className="text-center font-josefine font-light italic text-4xl mt-6">
-            Where to find us!
+              Where to find us!
             </div>
           </div>
           <EmailForm/>
-
         </div>
 
       <div className="font-josefine font-light text-4xl italic text-center my-4 px-3 md:max-w-2xl place-self-center">
         Or take our questionnaire below to recieve a detailed quote.
       </div>
-      <div>
-        <Survey/>
+      <div className="text-center">
+        {/* <Survey/> */}
+        <SurveyButton/>
       </div>
     </main>
   )
