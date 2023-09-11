@@ -5,6 +5,7 @@ import WhoAreYou from "./WhoAreYou"
 import SocialMediaHave from "./SocalMediaSelection"
 import SocialMediaSelection from "./SocalMediaSelection"
 import InvestmentLevel from "./InvestmentLevel"
+import ServiceSelectors from "./ServiceSelectors"
 
 
 interface SurveyProps {
@@ -123,6 +124,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             6. What services are you looking for?
           </div>
+          <ServiceSelectors surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
