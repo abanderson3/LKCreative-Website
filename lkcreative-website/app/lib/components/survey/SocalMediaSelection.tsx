@@ -22,7 +22,7 @@ interface SocialMediaHaveProps {
 
 // need to add handleSelect prop
 
-const SocialMediaHave: FC<SocialMediaHaveProps> = ({surveyData, setSurveyData}) => {
+const SocialMediaSelection: FC<SocialMediaHaveProps> = ({surveyData, setSurveyData}) => {
 
   return (
     <ul className="font-josefine font-light flex flex-wrap justify-center">
@@ -62,4 +62,4 @@ const SocialMediaHave: FC<SocialMediaHaveProps> = ({surveyData, setSurveyData}) 
 
 }
 
-export default SocialMediaHave
+export default SocialMediaSelection

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { FC } from "react"
 import WhoAreYou from "./WhoAreYou"
 import SocialMediaHave from "./SocalMediaSelection"
+import SocialMediaSelection from "./SocalMediaSelection"
 
 
 interface SurveyProps {
@@ -95,7 +96,6 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             2. Who are you?
           </div>
-            {/* size of business? */}
             <WhoAreYou surveyData={surveyData} setSurveyData={setSurveyData} />
           </div>
         <div>
@@ -109,7 +109,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             4. What social media do you want to work on?
           </div>
-          <SocialMediaHave surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SocialMediaSelection surveyData={surveyData} setSurveyData={setSurveyData}/>
             {/* need to add handleSelect */}
         </div>
         <div>
