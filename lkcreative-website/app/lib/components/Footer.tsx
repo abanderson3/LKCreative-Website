@@ -8,7 +8,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({}) => {
 
   return (
-    <div className=" w-full h-16 bg-customMint">
+    <div className="w-full h-16 bg-customMint">
 
     </div>
   )

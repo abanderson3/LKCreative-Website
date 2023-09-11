@@ -19,7 +19,7 @@ export default function Contact({}) {
         </div>
 
       <div className="font-josefine font-light text-4xl italic text-center my-4 px-3 md:max-w-2xl place-self-center">
-        Or take our questionnaire below to recieve a detailed quote.
+        Or take our questionnaire to recieve a detailed quote.
       </div>
       <div className="text-center">
         {/* <Survey/> */}
