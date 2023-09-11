@@ -1,7 +1,7 @@
 "use client"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react";
-import Modal from "./Modal";
+import Modal from "../modal/Modal";
 
 const SurveyButton = () => {
   const [ modalOpen, setModalOpen ] = useState(false);

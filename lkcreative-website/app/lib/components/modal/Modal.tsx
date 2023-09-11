@@ -2,11 +2,11 @@
 import { motion } from "framer-motion"
 import Backdrop from "./Backdrop"
 import { FC } from "react"
-import Survey from "./Survey"
+import Survey from "../survey/Survey"
 
 interface ModalProps {
   modalOpen: boolean,
-  handleClose: any,
+  handleClose: () => void,
   // text: any
 }
 
@@ -37,7 +37,7 @@ const Modal: FC<ModalProps> = ({ handleClose }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="justify-center m-5 overflow-y-auto"
+        className="justify-center m-5 overflow-y-auto sm:m-5 md:m-auto "
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -45,7 +45,7 @@ const Modal: FC<ModalProps> = ({ handleClose }) => {
       >
         <motion.button
           className="absolute left-4 top-3 font-josefine"
-          whileHover={{ scale: 1.3 }}
+          whileHover={{ scale: 1.3}}
           whileTap={{ scale: 1.0 }}
           onClick={handleClose}
         >

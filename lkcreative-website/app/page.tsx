@@ -3,7 +3,7 @@ import PageTitle from './lib/components/PageTitle'
 import IntroText from './lib/components/IntroText'
 import ElevatorPitch from './lib/components/ElevatorPitch'
 import ServicesCards from './lib/components/ServicesCards'
-import SurveyButton from './lib/components/SurveyButton'
+import SurveyButton from './lib/components/survey/SurveyButton'
 
 export default function Home() {
   const sequence = [

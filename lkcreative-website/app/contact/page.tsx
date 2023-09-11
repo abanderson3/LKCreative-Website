@@ -1,8 +1,8 @@
 import PageTitle from "../lib/components/PageTitle"
 import IntroText from "../lib/components/IntroText"
 import EmailForm from "../lib/components/EmailForm"
-import Survey from "../lib/components/Survey"
-import SurveyButton from "../lib/components/SurveyButton"
+import Survey from "../lib/components/survey/Survey"
+import SurveyButton from "../lib/components/survey/SurveyButton"
 
 export default function Contact({}) {
 
