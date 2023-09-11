@@ -4,6 +4,7 @@ import { FC } from "react"
 import WhoAreYou from "./WhoAreYou"
 import SocialMediaHave from "./SocalMediaSelection"
 import SocialMediaSelection from "./SocalMediaSelection"
+import InvestmentLevel from "./InvestmentLevel"
 
 
 interface SurveyProps {
@@ -39,7 +40,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     handleClose();
   }
 
-  const questionStyle = "my-4 text-xl font-light font-josefine"
+  const questionStyle = "my-4 text-2xl font-light font-josefine"
 
   return (
     <form
@@ -53,7 +54,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
         <div className="flex flex-col justify-center max-w-xl mx-auto">
           <input
             required
-            className="border border-black m-1 rounded-md p-2"
+            className="border border-black m-1 rounded-md p-1 text-center"
             type="text"
             name="firstName"
             placeholder="First Name"
@@ -63,7 +64,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
           <input
             required
-            className="border border-black m-1 rounded-md p-2 text-base"
+            className="border border-black m-1 rounded-md p-1 text-center"
             type="text"
             name="lastName"
             placeholder="Last Name"
@@ -73,7 +74,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
           <input
             required
-            className="border border-black m-1 rounded-md p-2 text-base"
+            className="border border-black m-1 rounded-md p-1 text-center"
             type="email"
             name="email"
             placeholder="Email"
@@ -83,7 +84,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
           <input
             required
-            className="border border-black m-1 rounded-md p-2 text-base"
+            className="border border-black m-1 rounded-md p-1 text-center"
             type="number"
             name="phoneNumber"
             placeholder="Phone"
@@ -116,6 +117,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             5. What level of investment are you comfortable with?
           </div>
+          <InvestmentLevel surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>

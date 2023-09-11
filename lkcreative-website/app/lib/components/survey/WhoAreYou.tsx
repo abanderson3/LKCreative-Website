@@ -19,6 +19,8 @@ interface WhoAreYouProps {
   setSurveyData: (surveyData: any) => void
 }
 
+// need handleSelect?
+
 const WhoAreYou: FC<WhoAreYouProps> = ({ surveyData, setSurveyData }) => {
 
   return (

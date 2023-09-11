@@ -21,6 +21,7 @@ interface SocialMediaHaveProps {
 }
 
 // need to add handleSelect prop
+// want to conditionally render text entry field for links?
 
 const SocialMediaSelection: FC<SocialMediaHaveProps> = ({surveyData, setSurveyData}) => {
 
@@ -55,6 +56,11 @@ const SocialMediaSelection: FC<SocialMediaHaveProps> = ({surveyData, setSurveyDa
       <li className="border border-black m-1 p-1">
         <input type="radio"></input>
         Linkedin
+      </li>
+
+      <li className="border border-black m-1 p-1">
+        <input type="radio"></input>
+        YouTube
       </li>
 
     </ul>
