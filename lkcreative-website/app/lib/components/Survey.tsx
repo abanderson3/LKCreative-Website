@@ -24,11 +24,11 @@ const Survey = () => {
     }));
   }
 
-  const questionStyle = "my-4 text-3xl font-light font-josefine"
+  const questionStyle = "my-4 text-xl font-light font-josefine"
 
   return (
     <form
-      className="flex flex-col justify-center text-center my-8 mx-4"
+      className="border border-black flex flex-col justify-center text-center p-4 bg-customEgg rounded-2xl"
     >
       <div>
         <div className={questionStyle}>

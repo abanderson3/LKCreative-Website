@@ -2,10 +2,12 @@
 import { motion } from "framer-motion"
 import Backdrop from "./Backdrop"
 import { FC } from "react"
+import Survey from "./Survey"
 
 interface ModalProps {
+  modalOpen: boolean,
   handleClose: any,
-  text: any
+  // text: any
 }
 
 const dropIn = {
@@ -29,19 +31,19 @@ const dropIn = {
   }
 }
 
-const Modal: FC<ModalProps> = ({ handleClose, text }) => {
+const Modal: FC<ModalProps> = ({ handleClose }) => {
 
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="w-full h-full m-10 flex flex-col justify-center"
+        className="justify-center m-4 overflow-y-auto"
         variants={dropIn}
         initial="hidden"
         animate="visible"
         exit="exit"
       >
-        {text}
+        <Survey/>
       </motion.div>
     </Backdrop>
   )

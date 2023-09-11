@@ -3,6 +3,7 @@ import PageTitle from './lib/components/PageTitle'
 import IntroText from './lib/components/IntroText'
 import ElevatorPitch from './lib/components/ElevatorPitch'
 import ServicesCards from './lib/components/ServicesCards'
+import SurveyButton from './lib/components/SurveyButton'
 
 export default function Home() {
   const sequence = [
@@ -18,9 +19,10 @@ export default function Home() {
 
 
   return (
-    <main className="">
+    <main className=" text-center">
       {/* <PageTitle title="Home" /> */}
       <IntroText cursor={true} sequence={sequence} />
+      <SurveyButton/>
       {/* <ElevatorPitch /> */}
       <ServicesCards />
     </main>

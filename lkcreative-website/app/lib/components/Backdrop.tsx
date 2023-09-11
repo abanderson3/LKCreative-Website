@@ -11,7 +11,7 @@ const Backdrop: FC<BackdropProps>= ({ children, onClick }) => {
 
   return (
     <motion.div
-      className="absolute w-full h-full flex items-center justify-center bg-opacity-80 bg-black"
+      className="fixed top-0 left-0 w-full h-full flex justify-center bg-opacity-60 bg-black"
       onClick={onClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
