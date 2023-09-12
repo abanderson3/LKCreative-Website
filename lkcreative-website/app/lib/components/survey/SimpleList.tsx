@@ -1,4 +1,5 @@
 "use client"
+import { motion } from "framer-motion";
 import { FC, useState } from "react";
 
 interface SimpleListProps {
@@ -15,7 +16,7 @@ interface SimpleListProps {
     budget: string,
     services: Object,
     targetAudience: Object,
-    rawContent: String,
+    rawContent: string,
     preferredContent: string,
     contentAssistance: string,
     techProficiency: Array<string>
@@ -35,9 +36,9 @@ const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, set
     })
   }
 
-  const onClickTest = (event:any) => {
-    console.log(event.target.name, event.target.value, surveyData)
-  }
+  // const onClickTest = (event:any) => {
+  //   console.log(event.target.name, event.target.value, event.target, surveyData)
+  // }
 
 
   return (
@@ -45,15 +46,15 @@ const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, set
       <ul className="font-josefine font-light flex flex-col justify-center">
         {listOptions.map((option, i) => (
           <li
-            className="border border-black"
+            className=""
             key={i}
           >
-            <input type="radio" value={option} id="listOption" className="hidden peer" />
+            <input type="radio"  id={option + listName} name={listName} value={option} onChange={onSelectionChange} checked={(surveyData as any)[listName] === option} className="hidden peer" />
             <label
-              htmlFor="listOption"
-              className="border border-black m-1 p-1 w-11/12 max-w-sm rounded-lg peer-checked:text-blue-500 hover:text-gray-600"
-              onChange={onSelectionChange}
-              onClick={onClickTest}
+              htmlFor={option + listName}
+              className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:text-blue-500 hover:text-red-600"
+
+              // onClick={onClickTest}
             >
               {option}
             </label>

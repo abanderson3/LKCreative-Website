@@ -16,7 +16,9 @@ interface ServiceSelectorProps {
     budget: string,
     services: Object,
     targetAudience: Object,
-    rawContent: Object,
+    rawContent: string,
+    preferredContent: string,
+    contentAssistance: string,
     techProficiency: Array<string>
   },
   setSurveyData: (surveyData: any) => void,

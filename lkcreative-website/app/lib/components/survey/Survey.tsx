@@ -41,6 +41,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
   const handleSurveySubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     // logic for sending email with sendgrid
+    console.log(surveyData)
     handleClose();
   }
 
