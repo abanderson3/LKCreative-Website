@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react"
 import { FC } from "react"
 import WhoAreYou from "./WhoAreYou"
-import SocialMediaHave from "./SocalMediaSelection"
 import SocialMediaSelection from "./SocalMediaSelection"
 import InvestmentLevel from "./InvestmentLevel"
 import ServiceSelectors from "./ServiceSelectors"
@@ -31,7 +30,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     techProficiency: []
   })
 
-  const handleFormChange = (event: { target: { name: string; value: string } }) => {
+  const handleFormChange = (event:any) => {
     setSurveyData((curr) => ({
       ...curr,
       [event.target.name]: event.target.value
@@ -112,21 +111,21 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             3. What social media do you have?
           </div>
-            <SocialMediaHave surveyData={surveyData} setSurveyData={setSurveyData}/>
+            <SocialMediaSelection listName={"currentSocials"} onSelectionChange={handleFormChange} surveyData={surveyData} setSurveyData={setSurveyData}/>
             {/* need to add handleSelect */}
         </div>
         <div>
           <div className={questionStyle}>
             4. What social media do you want to work on?
           </div>
-          <SocialMediaSelection surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SocialMediaSelection listName={"toWorkOnSocials"} onSelectionChange={handleFormChange} surveyData={surveyData} setSurveyData={setSurveyData}/>
             {/* need to add handleSelect */}
         </div>
         <div>
           <div className={questionStyle}>
             5. What level of investment are you comfortable with?
           </div>
-          <SimpleList listName={"budget"} listOptions={investmentLevelOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList onSelectionChange={handleFormChange} listName={"budget"} listOptions={investmentLevelOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
@@ -143,20 +142,20 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             8. What kind of content do you prefer to use?
           </div>
-          <SimpleList listName={"preferredContent"} listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList onSelectionChange={handleFormChange} listName={"preferredContent"} listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
             9. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
           </div>
-          <SimpleList listName={"rawContent"} listOptions={rawContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList onSelectionChange={handleFormChange} listName={"rawContent"} listOptions={rawContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
           {/* options for future content and current content */}
         </div>
         <div>
           <div className={questionStyle}>
           10. Will you need assistance producing raw images and video content?
           </div>
-          <SimpleList listName={"contentAssistance"} listOptions={contentAssistanceOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList onSelectionChange={handleFormChange} listName={"contentAssistance"} listOptions={contentAssistanceOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>

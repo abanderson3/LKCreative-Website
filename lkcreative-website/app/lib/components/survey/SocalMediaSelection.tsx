@@ -2,6 +2,7 @@
 import { FC } from "react"
 
 interface SocialMediaSelectionProps {
+  listName: string,
   surveyData: {
     firstName: string,
     lastName: string,
@@ -19,49 +20,105 @@ interface SocialMediaSelectionProps {
     techProficiency: Array<string>
   },
   setSurveyData: (surveyData: any) => void,
-  // handleSelect: () => void
+  onSelectionChange: (event:any) => void
 }
 
 // need to add handleSelect prop
 // want to conditionally render text entry field for links?
 
-const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({surveyData, setSurveyData}) => {
+const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyData, onSelectionChange ,setSurveyData}) => {
 
   return (
     <ul className="font-josefine font-light flex flex-wrap justify-center">
 
       <li className="border border-black m-1  p-1">
-        <input type="radio"></input>
-        Facebook
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
+          Facebook
       </li>
 
       <li className="border border-black m-1 p-1">
-        <input type="radio"></input>
-        X/Twitter
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
+          X/Twitter
       </li>
 
       <li className="border border-black m-1 p-1">
-        <input type="radio"></input>
-        Instagram
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
+          Instagram
       </li>
 
       <li className="border border-black m-1 p-1">
-        <input type="radio"></input>
-        TikTok
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
+          TikTok
       </li>
 
       <li className="border border-black m-1 p-1">
-        <input type="radio"></input>
-        Pinterest
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
+          Pinterest
       </li>
 
       <li className="border border-black m-1 p-1">
-        <input type="radio"></input>
-        Linkedin
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
+          Linkedin
       </li>
 
       <li className="border border-black m-1 p-1">
-        <input type="radio"></input>
+        <input
+          type="radio"
+          id=""
+          name="socials"
+          value=""
+          onChange={onSelectionChange}
+          checked={(surveyData as any)[listName] === ""}
+          className="peer hidden"
+        />
         YouTube
       </li>
 

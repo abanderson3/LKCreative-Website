@@ -22,19 +22,13 @@ interface SimpleListProps {
     techProficiency: Array<string>
   },
   setSurveyData: (surveyData: any) => void,
+  onSelectionChange: (event:any) => void
 }
 
-const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, setSurveyData}) => {
+const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, onSelectionChange, setSurveyData}) => {
 
 
   // let checked = surveyData[listName as keyof Object] === option
-  const onSelectionChange = (event:any) => {
-    console.log(event.target.name, event.target.value, surveyData)
-    setSurveyData({
-      ...surveyData,
-      [event.target.name]: event.target.value
-    })
-  }
 
   // const onClickTest = (event:any) => {
   //   console.log(event.target.name, event.target.value, event.target, surveyData)
@@ -53,8 +47,6 @@ const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, set
             <label
               htmlFor={option + listName}
               className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:text-blue-500 hover:text-red-600"
-
-              // onClick={onClickTest}
             >
               {option}
             </label>

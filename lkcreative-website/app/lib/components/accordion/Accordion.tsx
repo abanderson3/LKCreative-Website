@@ -27,7 +27,7 @@ const Accordion: FC<AccordionProps> = ({header, body}) => {
   }
 
   return (
-    <>
+    <div className="border border-black m-1 rounded-lg max-w-lg mx-auto w-11/12">
       <motion.header
         initial={false}
         animate={{ backgroundColor: expanded ? "" : "" }}
@@ -51,7 +51,7 @@ const Accordion: FC<AccordionProps> = ({header, body}) => {
           </motion.section>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )
 }
 
