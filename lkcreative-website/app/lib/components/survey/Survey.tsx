@@ -5,7 +5,7 @@ import WhoAreYou from "./WhoAreYou"
 import SocialMediaHave from "./SocalMediaSelection"
 import SocialMediaSelection from "./SocalMediaSelection"
 import InvestmentLevel from "./InvestmentLevel"
-import ServiceSelectors from "./ServiceSelectors"
+import ServiceSelectors from "../serviceSelectors/ServiceSelectors"
 
 
 interface SurveyProps {

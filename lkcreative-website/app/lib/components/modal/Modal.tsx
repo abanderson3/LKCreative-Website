@@ -37,7 +37,7 @@ const Modal: FC<ModalProps> = ({ handleClose }) => {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="m-6 overflow-y-auto items-center max-w-6xl sm:my-8 md:my-16 lg:my-24 xl:my-24"
+        className="m-6 overflow-y-auto items-center max-w-6xl sm:my-8 md:my-14 lg:my-16 xl:my-24"
         variants={dropIn}
         initial="hidden"
         animate="visible"
