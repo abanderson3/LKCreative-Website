@@ -25,18 +25,20 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     budget:'',
     services: {},
     targetAudience: {},
-    rawContent: {},
+    rawContent: "",
+    preferredContent: "",
+    contentAssistance: "",
     techProficiency: []
   })
 
-  const handleChange = (event: { target: { name: string; value: string } }) => {
+  const handleFormChange = (event: { target: { name: string; value: string } }) => {
     setSurveyData((curr) => ({
       ...curr,
       [event.target.name]: event.target.value
     }));
   }
 
-  const handleSubmit = (event: { preventDefault: () => void }) => {
+  const handleSurveySubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     // logic for sending email with sendgrid
     handleClose();
@@ -45,12 +47,12 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
   const investmentLevelOptions = ["Budget is not a primary concern.", "Willing to invest in high quality services.", "Moderate and flexible, open to recommendations.", "Limited, need to be mindful of costs.", "Prefer not to discuss budget at this time."];
   const preferredContentOptions = ["Text/Blogs", "Videos", "Photos", "Infographics", "Other"];
   const rawContentOptions = ["None.", "Some saved, rarely produced.", "A lot saved, rarely produced.", "Often produced.", "Other"]
-  const contentAssistanceOptions = ["I will not need help producing content.", "I am looking for reccomendations regarding content production.", "I may occassionally need help producing content", "I will need help producing content regularly.", "Other"]
+  const contentAssistanceOptions = ["I will not need help producing content.", "I need for reccomendations for content production.", "I may occassionally need help producing content", "I will need help producing content regularly.", "Other"]
   const questionStyle = "my-4 text-2xl font-light font-josefine";
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={handleSurveySubmit}
       className="border border-black flex flex-col justify-center text-center p-6 bg-customEgg rounded-2xl"
     >
       <div className="">
@@ -65,7 +67,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
             name="firstName"
             placeholder="First Name"
             value={surveyData.firstName}
-            onChange={handleChange}
+            onChange={handleFormChange}
           />
 
           <input
@@ -75,7 +77,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
             name="lastName"
             placeholder="Last Name"
             value={surveyData.lastName}
-            onChange={handleChange}
+            onChange={handleFormChange}
           />
 
           <input
@@ -85,7 +87,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
             name="email"
             placeholder="Email"
             value={surveyData.email}
-            onChange={handleChange}
+            onChange={handleFormChange}
           />
 
           <input
@@ -95,7 +97,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
             name="phoneNumber"
             placeholder="Phone"
             value={surveyData.phoneNumber}
-            onChange={handleChange}
+            onChange={handleFormChange}
           />
         </div>
 
@@ -123,7 +125,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             5. What level of investment are you comfortable with?
           </div>
-          <SimpleList listOptions={investmentLevelOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList listName={"budget"} listOptions={investmentLevelOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
@@ -140,20 +142,20 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             8. What kind of content do you prefer to use?
           </div>
-          <SimpleList listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList listName={"preferredContent"} listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
             9. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
           </div>
-          <SimpleList listOptions={rawContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList listName={"rawContent"} listOptions={rawContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
           {/* options for future content and current content */}
         </div>
         <div>
           <div className={questionStyle}>
           10. Will you need assistance producing raw images and video content?
           </div>
-          <SimpleList listOptions={contentAssistanceOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList listName={"contentAssistance"} listOptions={contentAssistanceOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
