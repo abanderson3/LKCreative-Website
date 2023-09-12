@@ -5,7 +5,8 @@ import WhoAreYou from "./WhoAreYou"
 import SocialMediaHave from "./SocalMediaSelection"
 import SocialMediaSelection from "./SocalMediaSelection"
 import InvestmentLevel from "./InvestmentLevel"
-import ServiceSelectors from "../serviceSelectors/ServiceSelectors"
+import ServiceSelectors from "./ServiceSelectors"
+import SimpleList from "./SimpleList"
 
 
 interface SurveyProps {
@@ -41,6 +42,8 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     handleClose();
   }
 
+  const investmentLevelOptions = ["Budget is not a primary concern.", "Willing to invest in high quality services.", "Moderate and flexible, open to recommendations.", "Limited, need to be mindful of costs.", "Prefer not to discuss budget at this time."]
+  const preferredContentOptions = ["Text/Blogs", "Videos", "Photos", "Infographics", "Other"]
   const questionStyle = "my-4 text-2xl font-light font-josefine"
 
   return (
@@ -118,7 +121,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             5. What level of investment are you comfortable with?
           </div>
-          <InvestmentLevel surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleList listOptions={investmentLevelOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
@@ -135,6 +138,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             8. What kind of content do you prefer to use?
           </div>
+          <SimpleList listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>

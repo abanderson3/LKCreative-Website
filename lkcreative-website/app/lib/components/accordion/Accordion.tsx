@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useState, FC, ReactComponentElement } from "react"
 
 interface AccordionProps {
-  header: string,
-  body: string
+  header: ReactComponentElement<any>,
+  body: ReactComponentElement<any>
 }
 
 const accordionVariant = {

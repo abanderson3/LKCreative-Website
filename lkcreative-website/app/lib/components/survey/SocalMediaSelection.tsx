@@ -1,7 +1,7 @@
 "use client"
 import { FC } from "react"
 
-interface SocialMediaHaveProps {
+interface SocialMediaSelectionProps {
   surveyData: {
     firstName: string,
     lastName: string,
@@ -23,7 +23,7 @@ interface SocialMediaHaveProps {
 // need to add handleSelect prop
 // want to conditionally render text entry field for links?
 
-const SocialMediaSelection: FC<SocialMediaHaveProps> = ({surveyData, setSurveyData}) => {
+const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({surveyData, setSurveyData}) => {
 
   return (
     <ul className="font-josefine font-light flex flex-wrap justify-center">
