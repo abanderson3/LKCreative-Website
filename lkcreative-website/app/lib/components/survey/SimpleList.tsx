@@ -29,7 +29,9 @@ const SimpleList: FC<SimpleListProps> = ({listOptions, surveyData, setSurveyData
     <>
       <ul className="font-josefine font-light flex flex-wrap justify-center">
         {listOptions.map((option, i) => (
-          <li className="border border-black m-1 p-1 w-11/12 max-w-sm" key={i}>{option}</li>
+          <li className="border border-black m-1 p-1 w-11/12 max-w-sm rounded-lg" key={i}>
+            {option}
+          </li>
         ))}
       </ul>
     </>

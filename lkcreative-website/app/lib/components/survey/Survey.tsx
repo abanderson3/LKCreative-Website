@@ -42,9 +42,11 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     handleClose();
   }
 
-  const investmentLevelOptions = ["Budget is not a primary concern.", "Willing to invest in high quality services.", "Moderate and flexible, open to recommendations.", "Limited, need to be mindful of costs.", "Prefer not to discuss budget at this time."]
-  const preferredContentOptions = ["Text/Blogs", "Videos", "Photos", "Infographics", "Other"]
-  const questionStyle = "my-4 text-2xl font-light font-josefine"
+  const investmentLevelOptions = ["Budget is not a primary concern.", "Willing to invest in high quality services.", "Moderate and flexible, open to recommendations.", "Limited, need to be mindful of costs.", "Prefer not to discuss budget at this time."];
+  const preferredContentOptions = ["Text/Blogs", "Videos", "Photos", "Infographics", "Other"];
+  const rawContentOptions = ["None.", "Some saved, rarely produced.", "A lot saved, rarely produced.", "Often produced.", "Other"]
+  const contentAssistanceOptions = ["I will not need help producing content.", "I am looking for reccomendations regarding content production.", "I may occassionally need help producing content", "I will need help producing content regularly.", "Other"]
+  const questionStyle = "my-4 text-2xl font-light font-josefine";
 
   return (
     <form
@@ -144,11 +146,18 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             9. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
           </div>
+          <SimpleList listOptions={rawContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
           {/* options for future content and current content */}
         </div>
         <div>
           <div className={questionStyle}>
-          10. What is your level of technical proficiency?
+          10. Will you need assistance producing raw images and video content?
+          </div>
+          <SimpleList listOptions={contentAssistanceOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+        </div>
+        <div>
+          <div className={questionStyle}>
+          11. What is your level of technical proficiency?
           </div>
         </div>
       </div>
