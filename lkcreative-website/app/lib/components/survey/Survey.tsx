@@ -5,7 +5,8 @@ import WhoAreYou from "./WhoAreYou"
 import SocialMediaSelection from "./SocalMediaSelection"
 import InvestmentLevel from "./InvestmentLevel"
 import ServiceSelectors from "./ServiceSelectors"
-import SimpleList from "./SimpleList"
+import SimpleList from "./SimpleRadioList"
+import SimpleCheckboxList from "./SimpleCheckboxList"
 
 
 interface SurveyProps {
@@ -44,10 +45,14 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     handleClose();
   }
 
+
+
   const investmentLevelOptions = ["Budget is not a primary concern.", "Willing to invest in high quality services.", "Moderate and flexible, open to recommendations.", "Limited, need to be mindful of costs.", "Prefer not to discuss budget at this time."];
   const preferredContentOptions = ["Text/Blogs", "Videos", "Photos", "Infographics", "Other"];
   const rawContentOptions = ["None.", "Some saved, rarely produced.", "A lot saved, rarely produced.", "Often produced.", "Other"]
   const contentAssistanceOptions = ["I will not need help producing content.", "I need for reccomendations for content production.", "I may occassionally need help producing content", "I will need help producing content regularly.", "Other"]
+  const techProficiencyOptions = ["Novice: I have limited experience and knowledge.", "Intermediate: I can perform basic tasks(posting, responding to comments, etc.), but still have a lot to learn.", "Competent: I have a good understanding and can efficiently manage my accounts.", "Proficient: I am skilled and confident in my ability to manage complex tools on multiple platforms.", "Expert: I have advanced knowledge of business tools and can handle complex takss with ease."];
+
   const questionStyle = "my-4 text-2xl font-light font-josefine";
 
   return (
@@ -105,7 +110,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             2. Who are you?
           </div>
-            <WhoAreYou surveyData={surveyData} setSurveyData={setSurveyData} />
+            <WhoAreYou onSelectionChange={handleFormChange} surveyData={surveyData} setSurveyData={setSurveyData} />
           </div>
         <div>
           <div className={questionStyle}>
@@ -142,7 +147,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
             8. What kind of content do you prefer to use?
           </div>
-          <SimpleList onSelectionChange={handleFormChange} listName={"preferredContent"} listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+          <SimpleCheckboxList listName={"preferredContent"} listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
@@ -161,6 +166,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <div className={questionStyle}>
           11. What is your level of technical proficiency?
           </div>
+          <SimpleList onSelectionChange={handleFormChange} listName={"techProficiency"} listOptions={techProficiencyOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
       </div>
       <button type="submit" className="border border-black rounded-md mx-24 my-3 p-1 font-normal">Submit</button>

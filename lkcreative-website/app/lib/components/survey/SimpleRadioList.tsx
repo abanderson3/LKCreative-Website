@@ -43,14 +43,22 @@ const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, onS
             className=""
             key={i}
           >
-            <input type="radio"  id={option + listName} name={listName} value={option} onChange={onSelectionChange} checked={(surveyData as any)[listName] === option} className="hidden peer" />
+            <input
+              type="radio"
+              id={option + listName}
+              name={listName}
+              value={option}
+              onChange={onSelectionChange}
+              checked={(surveyData as any)[listName] === option}
+              className="hidden peer"
+              required
+            />
             <label
               htmlFor={option + listName}
               className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:text-blue-500 hover:text-red-600"
             >
               {option}
             </label>
-
           </li>
         ))}
       </ul>
