@@ -33,7 +33,7 @@ const ServiceSelectors: FC<ServiceSelectorsProps> = ({surveyData, setSurveyData}
   const businessServices = ["Business Guidelines & Messaging", "Logo & Visual Identity Development", "Competitor Analysis & Market Research", "Virtual Assisting"]
 
   return (
-    <div className="font-josefine font-light flex flex-col justify-center mx-auto">
+    <div className="font-josefine font-light flex flex-col justify-center mx-auto md:flex-row">
       <Accordion
         header={<SelectorHeader header="Social Media Services"/>}
         body={
@@ -55,7 +55,7 @@ const ServiceSelectors: FC<ServiceSelectorsProps> = ({surveyData, setSurveyData}
       />
 
       <Accordion
-        header={<SelectorHeader header="Web Design/Development" />}
+        header={<SelectorHeader header="Branding & Business Services" />}
         body={
           <ServiceSelector
             surveyData={surveyData}

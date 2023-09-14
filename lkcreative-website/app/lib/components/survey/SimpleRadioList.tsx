@@ -53,12 +53,14 @@ const SimpleList: FC<SimpleListProps> = ({listOptions, listName, surveyData, onS
               className="hidden peer"
               required
             />
-            <label
+            <motion.label
+              whileHover={{scale: 1.05}}
+              whileTap={{scale: 0.95}}
               htmlFor={option + listName}
-              className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:text-blue-500 hover:text-red-600"
+              className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:bg-customMint hover:bg-slate-300"
             >
               {option}
-            </label>
+            </motion.label>
           </li>
         ))}
       </ul>

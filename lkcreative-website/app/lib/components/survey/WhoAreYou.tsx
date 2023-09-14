@@ -1,5 +1,6 @@
 "use client"
 import { FC } from "react"
+import { motion } from "framer-motion"
 
 interface WhoAreYouProps {
   surveyData: {
@@ -27,7 +28,7 @@ interface WhoAreYouProps {
 const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurveyData }) => {
 
   return (
-    <ul className="font-josefine font-light flex flex-wrap justify-center">
+    <ul className="font-josefine font-light flex justify-center flex-wrap max-w-3xl mx-auto sm:justify-evenly px-9">
 
       <li className="">
         <input
@@ -41,12 +42,14 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           required
         >
         </input>
-        <label
+        <motion.label
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.95}}
           htmlFor="individual"
-          className="border border-black m-1 p-1 peer-checked:text-blue-500 hover:text-red-600"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
         >
         Individual &#40;1&#41;
-        </label>
+        </motion.label>
       </li>
 
       <li className="">
@@ -60,12 +63,14 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           className="hidden peer"
         >
         </input>
-        <label
+        <motion.label
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.95}}
           htmlFor="micro"
-          className="border border-black m-1 p-1 peer-checked:text-blue-500 hover:text-red-600"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
         >
         Micro &#40;2 - 4&#41;
-        </label>
+        </motion.label>
       </li>
 
       <li className="">
@@ -79,12 +84,14 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           className="hidden peer"
         >
         </input>
-        <label
+        <motion.label
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.95}}
           htmlFor="small"
-          className="border border-black m-1 p-1 peer-checked:text-blue-500 hover:text-red-600"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
         >
         Small &#40;5 - 19&#41;
-        </label>
+        </motion.label>
       </li>
 
       <li className="">
@@ -98,12 +105,14 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           className="hidden peer"
         >
         </input>
-        <label
+        <motion.label
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.95}}
           htmlFor="medium"
-          className="border border-black m-1 p-1 peer-checked:text-blue-500 hover:text-red-600"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
         >
         Medium &#40;20 - 99&#41;
-        </label>
+        </motion.label>
       </li>
 
       <li className="">
@@ -117,12 +126,14 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           className="hidden peer "
         >
         </input>
-        <label
+        <motion.label
+          whileHover={{scale:1.1}}
+          whileTap={{scale:0.95}}
           htmlFor="large"
-          className="border border-black m-1 p-1 peer-checked:text-blue-500 hover:text-red-600"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
         >
         Large &#40;99+&#41;
-        </label>
+        </motion.label>
       </li>
 
     </ul>

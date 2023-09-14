@@ -27,7 +27,9 @@ const Accordion: FC<AccordionProps> = ({header, body}) => {
   }
 
   return (
-    <div className="border border-black m-1 rounded-lg max-w-lg mx-auto w-11/12">
+    <motion.div
+      className="m-1 rounded-lg max-w-lg mx-2 w-11/12 border border-black h-fit"
+    >
       <motion.header
         initial={false}
         animate={{ backgroundColor: expanded ? "" : "" }}
@@ -46,12 +48,13 @@ const Accordion: FC<AccordionProps> = ({header, body}) => {
             exit="collapsed"
             variants={accordionVariant}
             transition={{duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98]}}
+            className=""
           >
             {body}
           </motion.section>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }
 

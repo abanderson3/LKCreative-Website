@@ -60,7 +60,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           // onClick={(e: any) => console.log(listName, e.target.value, (surveyData as any)[listName])}
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"facebook" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
@@ -87,7 +87,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           // onClick={(e: any) => console.log(listName, e.target.value, (surveyData as any)[listName])}
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"x/twitter" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
@@ -113,7 +113,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"instagram" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
@@ -139,7 +139,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"tiktok" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
@@ -165,7 +165,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"pinterest" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
@@ -191,7 +191,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"linkedin" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
@@ -217,7 +217,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
         />
         <motion.label
-          whileTap={{ scale: 1.0 }}
+          whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"youtube" + listName}
           className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"

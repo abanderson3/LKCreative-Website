@@ -110,7 +110,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
         <div>
           <div className={questionStyle}>
-            2. Who are you?
+            2. What is the size of your business?
           </div>
             <WhoAreYou onSelectionChange={handleFormChange} surveyData={surveyData} setSurveyData={setSurveyData} />
           </div>
