@@ -58,7 +58,6 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           onChange={onSelectionChange}
           checked={(surveyData as any)["whoAreYou"] === "Micro (2 - 4)"}
           className="hidden peer"
-          required
         >
         </input>
         <label
@@ -78,7 +77,6 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           onChange={onSelectionChange}
           checked={(surveyData as any)["whoAreYou"] === "Small (5 - 19)"}
           className="hidden peer"
-          required
         >
         </input>
         <label
@@ -98,7 +96,6 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           onChange={onSelectionChange}
           checked={(surveyData as any)["whoAreYou"] === "Medium (20 - 99"}
           className="hidden peer"
-          required
         >
         </input>
         <label
@@ -118,7 +115,6 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           onChange={onSelectionChange}
           checked={(surveyData as any)["whoAreYou"] === "Large (99+)"}
           className="hidden peer "
-          required
         >
         </input>
         <label

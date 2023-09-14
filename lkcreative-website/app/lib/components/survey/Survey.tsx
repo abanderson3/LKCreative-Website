@@ -15,14 +15,14 @@ interface SurveyProps {
 
 const Survey: FC<SurveyProps> = ({handleClose}) => {
   const [ surveyData, setSurveyData ] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    whoAreYou: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    whoAreYou: "",
     currentSocials: [],
     toWorkOnSocials: [],
-    budget:'',
+    budget:"",
     services: {},
     targetAudience: {},
     rawContent: "",
@@ -40,7 +40,6 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
   const handleSurveySubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
-    // logic for sending email with sendgrid
     console.log(surveyData)
     handleClose();
   }
@@ -51,7 +50,9 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
   const preferredContentOptions = ["Text/Blogs", "Videos", "Photos", "Infographics", "Other"];
   const rawContentOptions = ["None.", "Some saved, rarely produced.", "A lot saved, rarely produced.", "Often produced.", "Other"]
   const contentAssistanceOptions = ["I will not need help producing content.", "I need for reccomendations for content production.", "I may occassionally need help producing content", "I will need help producing content regularly.", "Other"]
-  const techProficiencyOptions = ["Novice: I have limited experience and knowledge.", "Intermediate: I can perform basic tasks(posting, responding to comments, etc.), but still have a lot to learn.", "Competent: I have a good understanding and can efficiently manage my accounts.", "Proficient: I am skilled and confident in my ability to manage complex tools on multiple platforms.", "Expert: I have advanced knowledge of business tools and can handle complex takss with ease."];
+
+  // more about being competent with tech in general, not social media specific
+  const techProficiencyOptions = ["Novice: I have limited experience and knowledge.", "Intermediate: I can perform basic tasks(posting, responding to comments, etc.), but still have a lot to learn.", "Competent: I have a good understanding and can efficiently manage my accounts.", "Proficient: I am skilled and confident in my ability to manage complex tools on multiple platforms.", "Expert: I have advanced knowledge of business tools and can handle complex tasks with ease."];
 
   const questionStyle = "my-4 text-2xl font-light font-josefine";
 
@@ -169,7 +170,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           <SimpleList onSelectionChange={handleFormChange} listName={"techProficiency"} listOptions={techProficiencyOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
       </div>
-      <button type="submit" className="border border-black rounded-md mx-24 my-3 p-1 font-normal">Submit</button>
+      <button className="border border-black rounded-md mx-24 my-3 p-1 font-normal">Submit</button>
     </form>
   )
 }

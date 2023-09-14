@@ -52,14 +52,14 @@ const SimpleCheckboxList: FC<SimpleCheckboxListProps> = ({listOptions, listName,
             className=""
             key={i}
           >
-            <input type="checkbox"
+            <input
+              type="checkbox"
               id={option + listName}
               name={listName}
               value={option}
               onChange={onChange}
               checked={isChecked(option)}
               className="hidden peer"
-              required
             />
             <label
               htmlFor={option + listName}
