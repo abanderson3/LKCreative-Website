@@ -28,7 +28,8 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
     rawContent: "",
     preferredContent: "",
     contentAssistance: "",
-    techProficiency: []
+    techProficiency: [],
+    relatedComments: "",
   })
 
   const handleFormChange = (event:any) => {
@@ -68,7 +69,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
         <div className="flex flex-col justify-center max-w-xl mx-auto">
           <input
             required
-            className="border border-black m-1 rounded-md p-1 text-center"
+            className="border border-black m-1 rounded-md p-1 pl-2"
             type="text"
             name="firstName"
             placeholder="First Name"
@@ -78,7 +79,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
           <input
             required
-            className="border border-black m-1 rounded-md p-1 text-center"
+            className="border border-black m-1 rounded-md p-1 pl-2"
             type="text"
             name="lastName"
             placeholder="Last Name"
@@ -88,7 +89,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
           <input
             required
-            className="border border-black m-1 rounded-md p-1 text-center"
+            className="border border-black m-1 rounded-md p-1 pl-2"
             type="email"
             name="email"
             placeholder="Email"
@@ -98,7 +99,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
 
           <input
             required
-            className="border border-black m-1 rounded-md p-1 text-center"
+            className="border border-black m-1 rounded-md p-1 pl-2"
             type="number"
             name="phoneNumber"
             placeholder="Phone"
@@ -168,6 +169,18 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           11. What is your level of technical proficiency?
           </div>
           <SimpleList onSelectionChange={handleFormChange} listName={"techProficiency"} listOptions={techProficiencyOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
+        </div>
+        <div className="">
+          <div className={questionStyle}>
+          12. Related comments?
+          </div>
+          <textarea
+            className="border border-black m-1 rounded-md p-1 flex flex-col justify-center max-w-lg mx-auto w-11/12 pl-2 h-32"
+            name="relatedComments"
+            placeholder="What else do we need to know? (not required)"
+            value={surveyData.relatedComments}
+            onChange={handleFormChange}
+          />
         </div>
       </div>
       <button className="border border-black rounded-md mx-24 my-3 p-1 font-normal">Submit</button>

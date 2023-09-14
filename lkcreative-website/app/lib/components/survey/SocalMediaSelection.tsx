@@ -1,5 +1,7 @@
 "use client"
 import { FC } from "react"
+import Image from "next/image"
+import { motion } from "framer-motion"
 
 interface SocialMediaSelectionProps {
   listName: string,
@@ -44,7 +46,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
   }
 
   return (
-    <ul className="font-josefine font-light flex flex-wrap justify-center">
+    <ul className="font-josefine font-light max-w-3xl flex flex-wrap justify-center mx-auto sm:justify-evenly">
 
       <li className="">
         <input
@@ -57,12 +59,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
           // onClick={(e: any) => console.log(listName, e.target.value, (surveyData as any)[listName])}
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"facebook" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-          Facebook
-        </label>
+          <Image
+            className=""
+            src="./facebook_icon.svg"
+            alt="facebook_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
       <li className="">
@@ -76,12 +86,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           className="peer hidden"
           // onClick={(e: any) => console.log(listName, e.target.value, (surveyData as any)[listName])}
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"x/twitter" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-          X/Twitter
-        </label>
+          <Image
+            className=""
+            src="./x_social_icon.svg"
+            alt="x_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
       <li className="">
@@ -94,12 +112,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           checked={isChecked("Instagram")}
           className="peer hidden"
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"instagram" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-          Instagram
-        </label>
+          <Image
+            className=""
+            src="./instagram_icon.svg"
+            alt="instagram_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
       <li className="">
@@ -112,12 +138,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           checked={isChecked("TikTok")}
           className="peer hidden"
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"tiktok" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-        TikTok
-        </label>
+          <Image
+            className=""
+            src="./tiktok_icon.svg"
+            alt="tiktok_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
       <li className="">
@@ -130,12 +164,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           checked={isChecked("Pinterest")}
           className="peer hidden"
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"pinterest" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-          Pinterest
-        </label>
+          <Image
+            className=""
+            src="./pinterest_logo.svg"
+            alt="pinterest_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
       <li className="">
@@ -148,12 +190,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           checked={isChecked("Linkedin")}
           className="peer hidden"
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"linkedin" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-          Linkedin
-        </label>
+          <Image
+            className=""
+            src="./linkedin_icon.svg"
+            alt="linkedin_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
       <li className="">
@@ -166,12 +216,20 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           checked={isChecked("YouTube")}
           className="peer hidden"
         />
-        <label
+        <motion.label
+          whileTap={{ scale: 1.0 }}
+          whileHover={{ scale: 1.1 }}
           htmlFor={"youtube" + listName}
-          className="peer-checked:text-blue-500 hover:text-red-600 border border-black m-1 p-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
         >
-          YouTube
-        </label>
+          <Image
+            className=""
+            src="./youtube_icon.svg"
+            alt="youtube_icon"
+            width="42"
+            height="42"
+          />
+        </motion.label>
       </li>
 
     </ul>
