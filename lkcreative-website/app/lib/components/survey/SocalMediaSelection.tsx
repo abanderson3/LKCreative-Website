@@ -63,7 +63,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"facebook" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""
@@ -90,7 +90,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"x/twitter" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""
@@ -116,7 +116,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"instagram" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""
@@ -142,7 +142,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"tiktok" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""
@@ -168,7 +168,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"pinterest" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""
@@ -194,7 +194,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"linkedin" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""
@@ -220,7 +220,7 @@ const SocialMediaSelection: FC<SocialMediaSelectionProps> = ({listName, surveyDa
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.1 }}
           htmlFor={"youtube" + listName}
-          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1"
+          className="peer-checked:bg-customMint hover:bg-slate-300 rounded-lg flex p-2 m-1 cursor-pointer"
         >
           <Image
             className=""

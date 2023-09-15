@@ -46,7 +46,7 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           whileHover={{scale:1.1}}
           whileTap={{scale:0.95}}
           htmlFor="individual"
-          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex cursor-pointer"
         >
         Individual &#40;1&#41;
         </motion.label>
@@ -67,7 +67,7 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           whileHover={{scale:1.1}}
           whileTap={{scale:0.95}}
           htmlFor="micro"
-          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex cursor-pointer"
         >
         Micro &#40;2 - 4&#41;
         </motion.label>
@@ -88,7 +88,7 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           whileHover={{scale:1.1}}
           whileTap={{scale:0.95}}
           htmlFor="small"
-          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex cursor-pointer"
         >
         Small &#40;5 - 19&#41;
         </motion.label>
@@ -109,7 +109,7 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           whileHover={{scale:1.1}}
           whileTap={{scale:0.95}}
           htmlFor="medium"
-          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex cursor-pointer"
         >
         Medium &#40;20 - 99&#41;
         </motion.label>
@@ -130,7 +130,7 @@ const WhoAreYou: FC<WhoAreYouProps> = ({onSelectionChange, surveyData, setSurvey
           whileHover={{scale:1.1}}
           whileTap={{scale:0.95}}
           htmlFor="large"
-          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex"
+          className="border border-black m-1 mx-1 p-1 px-3 rounded-lg peer-checked:bg-customMint hover:bg-slate-300 flex cursor-pointer"
         >
         Large &#40;99+&#41;
         </motion.label>

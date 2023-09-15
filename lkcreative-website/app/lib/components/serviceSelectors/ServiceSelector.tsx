@@ -25,25 +25,50 @@ interface ServiceSelectorProps {
   // handleSelect: () => void
 }
 
+  const listVariant = {
+    hidden: { scale: 0.8},
+    show: {
+        scale: 1,
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.3,
+        },
+    },
+    exit: {
+      scale: 0,
+      transition: {
+          staggerChildren: 0.1,
+          delayChildren: 0.3,
+      },
+  },
+  }
+
+  const listItemVariant = {
+    hidden: { scale: 0, top: 100 },
+    show: { scale: 1, top: 30 },
+    exit: { scale: 0, top: 100}
+  }
+
 const ServiceSelector: FC<ServiceSelectorProps> = ({services, surveyData, setSurveyData}) => {
 
   return (
-      <motion.div
-        variants={{collapsed: {scale: 0.8}, open: {scale: 1}}}
-        transition={{duration: 0.8}}
-        className="m-1 max-w-lg mx-auto border-t rounded-lg border-black"
+    <motion.ul
+      variants={listVariant}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      className="m-1 max-w-lg mx-auto border-t rounded-lg border-black py-2"
+    >
+    {services.map((service, i) => (
+      <motion.li
+        className="border border-black m-2 mx-auto p-1 rounded-lg w-9/12"
+        key={i}
+        variants={listItemVariant}
       >
-        <ul className="">
-          {services.map((service, i) => (
-            <li
-              className="border border-black m-1 mx-auto p-1 rounded-lg w-9/12"
-              key={i}
-            >
-              {service}
-            </li>
-          ))}
-        </ul>
-      </motion.div>
+        {service}
+      </motion.li>
+    ))}
+  </motion.ul>
   )
 }
 

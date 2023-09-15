@@ -65,7 +65,7 @@ const SimpleCheckboxList: FC<SimpleCheckboxListProps> = ({listOptions, listName,
               whileHover={{ scale: 1.05}}
               whileTap={{scale: 0.95}}
               htmlFor={option + listName}
-              className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:bg-customMint hover:bg-slate-300"
+              className="flex justify-center border border-black m-1 p-1 w-11/12 max-w-lg rounded-lg mx-auto peer-checked:bg-customMint hover:bg-slate-300 cursor-pointer"
             >
               {option}
             </motion.label>

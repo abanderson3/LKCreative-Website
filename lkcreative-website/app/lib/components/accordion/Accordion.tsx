@@ -34,7 +34,7 @@ const Accordion: FC<AccordionProps> = ({header, body}) => {
         initial={false}
         animate={{ backgroundColor: expanded ? "" : "" }}
         onClick={onClick}
-        className=""
+        className="cursor-pointer"
       >
         {header}
       </motion.header>
@@ -47,7 +47,7 @@ const Accordion: FC<AccordionProps> = ({header, body}) => {
             animate="open"
             exit="collapsed"
             variants={accordionVariant}
-            transition={{duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98]}}
+            transition={{duration: 1.0, ease: [0.04, 0.62, 0.23, 0.98]}}
             className=""
           >
             {body}
