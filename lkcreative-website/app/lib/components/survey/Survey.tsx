@@ -140,39 +140,39 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
           </div>
           <ServiceSelectors surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
-        <div>
+        {/* <div>
           <div className={questionStyle}>
             7. Who is your target audience?
           </div>
-        </div>
+        </div> */}
         <div>
           <div className={questionStyle}>
-            8. What kind of content do you prefer to use?
+            7. What kind of content do you prefer to use?
           </div>
           <SimpleCheckboxList listName={"preferredContent"} listOptions={preferredContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
-            9. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
+            8. Do you have raw images and videos available for social media content, and do you anticipate having more in the future?
           </div>
           <SimpleList onSelectionChange={handleFormChange} listName={"rawContent"} listOptions={rawContentOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
           {/* options for future content and current content */}
         </div>
         <div>
           <div className={questionStyle}>
-          10. Will you need assistance producing raw images and video content?
+            9. Will you need assistance producing raw images and video content?
           </div>
           <SimpleList onSelectionChange={handleFormChange} listName={"contentAssistance"} listOptions={contentAssistanceOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div>
           <div className={questionStyle}>
-          11. What is your level of technical proficiency?
+            10. What is your level of technical proficiency?
           </div>
           <SimpleList onSelectionChange={handleFormChange} listName={"techProficiency"} listOptions={techProficiencyOptions} surveyData={surveyData} setSurveyData={setSurveyData}/>
         </div>
         <div className="">
           <div className={questionStyle}>
-          12. Related comments?
+            11. Related comments?
           </div>
           <textarea
             className="border border-black m-1 rounded-md p-1 flex flex-col justify-center max-w-lg mx-auto w-11/12 pl-2 h-32"

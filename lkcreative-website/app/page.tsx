@@ -19,10 +19,13 @@ export default function Home() {
 
 
   return (
-    <main className=" text-center">
+    <main className="text-center">
       {/* <PageTitle title="Home" /> */}
-      <IntroText cursor={true} sequence={sequence} />
-      <SurveyButton/>
+      <div className='bg-gradient-to-r from-white to-blue-200 pb-10'>
+        <IntroText cursor={true} sequence={sequence} />
+        <SurveyButton/>
+      </div>
+
       {/* <ElevatorPitch /> */}
       <ServicesCards />
     </main>

@@ -13,7 +13,7 @@ const SurveyButton = () => {
     <div className="">
       <motion.button
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 1.0 }}
+        whileTap={{ scale: 0.95 }}
         onClick={() => ( modalOpen ? close() : open() )}
         className="border border-black font-josefine text-3xl text-center font-light italic p-4 my-4 rounded-2xl"
       >

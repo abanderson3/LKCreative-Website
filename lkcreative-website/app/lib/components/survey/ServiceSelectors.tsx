@@ -30,10 +30,11 @@ interface ServiceSelectorsProps {
 const ServiceSelectors: FC<ServiceSelectorsProps> = ({surveyData, setSurveyData}) => {
   const socialMediaServices = ["Content Creation & Scheduling","Audience Engagement","Analytics & Reporting","One Time Consultation"];
   const webDevServices = ["Templated Website (Wix, Squarespace)", "Custom Application/Website", "Website Redesign", "Hosting", "Ecommerce"];
-  const businessServices = ["Business Guidelines & Messaging", "Logo & Visual Identity Development", "Competitor Analysis & Market Research", "Virtual Assisting"]
+  const businessServices = ["Business Guidelines & Messaging", "Virtual Assisting"]
 
   return (
     <div className="font-josefine font-light flex flex-col justify-center mx-auto md:flex-row">
+
       <Accordion
         header={<SelectorHeader header="Social Media Services"/>}
         body={
