@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
 
       <nav className="flex bg-customMint justify-end p-4 shadow-xl">
-        <div className='absolute left-2 top-0'>
+        <div className='absolute left-2 -top-1'>
         <Image
             className=""
             src="./LKCA_logo.svg"
