@@ -54,3 +54,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+.hw-inner {
+  height: 28rem;
+  width: 28rem
+}
+
+.hw-outer {
+  height: 32rem;
+  width: 32rem;
+}
+
+.anim-8s {
+  animation-duration: 8s !important
+}
