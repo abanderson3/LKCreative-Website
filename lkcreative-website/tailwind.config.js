@@ -22,8 +22,8 @@ module.exports = {
         }
       },
       animation: {
-        'spin-slow': 'spin-slow 13s linear infinite',
-        'rotate-img': 'rotate-img 13s linear infinite'
+        'spin-slow': 'spin-slow 15s linear infinite',
+        'rotate-img': 'rotate-img 15s linear infinite'
       },
       spacing: {
         '100': '28rem',

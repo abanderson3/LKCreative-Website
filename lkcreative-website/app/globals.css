@@ -56,8 +56,8 @@ body {
 } */
 
 .hw-inner {
-  height: 28rem;
-  width: 28rem
+  height: 26rem;
+  width: 26rem
 }
 
 .hw-outer {
@@ -66,5 +66,5 @@ body {
 }
 
 .anim-8s {
-  animation-duration: 8s !important
+  animation-duration: 10s !important
 }

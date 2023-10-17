@@ -20,13 +20,13 @@ export default function Home() {
 
 
   return (
-    <main className="text-center">
+    <main className="text-center overflow-hidden">
       {/* <PageTitle title="Home" /> */}
       <div className='bg-gradient-to-r from-white to-blue-200 pb-10 flex flex-col sm:flex-row'>
-        <div className='w-full sm:w-1/2 flex justify-center items-center '>
+        <div className='relative w-full sm:w-1/3 flex justify-center items-center transform md:-translate-x-20 sm:-translate-x-14 md:translate-y-4 scale-75 md:scale-105'>
           <HeroAnimation/>
         </div>
-        <div className='w-full sm:w-1/2'>
+        <div className='w-full sm:w-2/3'>
           <IntroText cursor={true} sequence={sequence} />
           <SurveyButton/>
         </div>
