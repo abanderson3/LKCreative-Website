@@ -4,6 +4,7 @@ import IntroText from './lib/components/IntroText'
 import ElevatorPitch from './lib/components/ElevatorPitch'
 import ServicesCards from './lib/components/ServicesCards'
 import SurveyButton from './lib/components/survey/SurveyButton'
+import HeroAnimation from './lib/components/HeroAnimation'
 
 export default function Home() {
   const sequence = [
@@ -21,9 +22,16 @@ export default function Home() {
   return (
     <main className="text-center">
       {/* <PageTitle title="Home" /> */}
-      <div className='bg-gradient-to-r from-white to-blue-200 pb-10'>
-        <IntroText cursor={true} sequence={sequence} />
-        <SurveyButton/>
+      <div className='bg-gradient-to-r from-white to-blue-200 pb-10 flex flex-col sm:flex-row'>
+        <div className='w-full sm:w-1/2 flex justify-center items-center '>
+          <HeroAnimation/>
+        </div>
+        <div className='w-full sm:w-1/2'>
+          <IntroText cursor={true} sequence={sequence} />
+          <SurveyButton/>
+        </div>
+
+
       </div>
 
       {/* <ElevatorPitch /> */}
