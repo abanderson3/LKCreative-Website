@@ -15,7 +15,7 @@ const SurveyButton = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => ( modalOpen ? close() : open() )}
-        className="border border-black font-josefine text-3xl text-center font-light italic p-4 my-4 rounded-2xl"
+        className="border border-black font-josefine text-3xl text-center font-light italic p-4 my-4 rounded-2xl bg-white"
       >
         Get a Quote!
       </motion.button>

@@ -22,8 +22,8 @@ export default function Home() {
   return (
     <main className="text-center overflow-hidden">
       {/* <PageTitle title="Home" /> */}
-      <div className='bg-gradient-to-r from-white to-blue-300 pb-10 flex flex-col sm:flex-row'>
-        <div className='relative w-full sm:w-1/3 flex justify-center items-center transform translate-y-16 -translate-x-28 md:-translate-x-20 sm:-translate-x-16 sm:translate-y-0 md:translate-y-5 scale-75 md:scale-100'>
+      <div className='bg-gradient-to-r from-customEgg to-blue-300 pb-10 flex flex-col sm:flex-row'>
+        <div className='relative w-full sm:w-1/3 flex justify-center items-center transform translate-y-16 -translate-x-28 md:-translate-x-20 sm:-translate-x-16 sm:translate-y-0 md:translate-y-5 xl:-translate-x-38 lg:-translate-x-28 scale-75 md:scale-100'>
           <HeroAnimation/>
         </div>
         <div className='w-full sm:w-2/3'>

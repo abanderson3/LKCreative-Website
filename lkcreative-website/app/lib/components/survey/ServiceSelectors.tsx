@@ -29,8 +29,8 @@ interface ServiceSelectorsProps {
 
 const ServiceSelectors: FC<ServiceSelectorsProps> = ({surveyData, setSurveyData}) => {
   const socialMediaServices = ["Content Creation & Scheduling","Audience Engagement","Analytics & Reporting","One Time Consultation"];
-  const webDevServices = ["Templated Website (Wix, Squarespace)", "Custom Application/Website", "Website Redesign", "Hosting", "Ecommerce"];
-  const businessServices = ["Business Guidelines & Messaging", "Virtual Assisting"]
+  const webDevServices = ["Templated Website (Wix, Squarespace)", "Custom Website", "Website Redesign", "Ecommerce"];
+  const businessServices = ["Business Guidelines & Messaging", "Administrative & Clerical Work", "Visual Branding"]
 
   return (
     <div className="font-josefine font-light flex flex-col justify-center mx-auto md:flex-row">
@@ -56,7 +56,7 @@ const ServiceSelectors: FC<ServiceSelectorsProps> = ({surveyData, setSurveyData}
       />
 
       <Accordion
-        header={<SelectorHeader header="Branding & Business Services" />}
+        header={<SelectorHeader header="Business Services" />}
         body={
           <ServiceSelector
             surveyData={surveyData}

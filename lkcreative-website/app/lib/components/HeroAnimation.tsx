@@ -10,6 +10,7 @@ const HeroAnimation = () => {
         alt="LKCA_logo"
         width="300"
         height="300"
+        priority={true}
       />
 
 
