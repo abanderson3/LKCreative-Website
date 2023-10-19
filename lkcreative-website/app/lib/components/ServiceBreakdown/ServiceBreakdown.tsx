@@ -7,7 +7,6 @@ interface ServiceBreakdownProps {
     service: string,
     description: string,
   },
-  orientation: string,
   // serviceImage: ComponentElement<any, any>,
 }
 
@@ -22,7 +21,7 @@ const accordionVariant = {
   }
 }
 
-const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList, orientation}) => {
+const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
 
   const [ expanded, setExpanded ] = useState(false)
 
