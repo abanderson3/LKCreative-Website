@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <body className={`${lora.variable} ${josefine.variable} font-lora flex flex-col min-h-screen justify-between border border-black`}>
+      <body className={`${lora.variable} ${josefine.variable} font-lora flex flex-col min-h-screen justify-between`}>
         < Navbar />
         { children }
         < Footer />
