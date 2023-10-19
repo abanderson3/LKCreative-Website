@@ -34,9 +34,11 @@ const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
   return (
     <>
     <motion.div
-      className="border border-black rounded-lg p-2 m-1 "
+
+      className="border border-black rounded-lg p-1 m-1 "
     >
       <motion.header
+
         initial={false}
         animate={{ backgroundColor: expanded ? "" : "" }}
         onClick={onClick}

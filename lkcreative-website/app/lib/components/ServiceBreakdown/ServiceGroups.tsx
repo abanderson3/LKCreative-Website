@@ -34,19 +34,19 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
 
   return (
     <>
-    <div className="flex flex-col p-10">
+    <div className="flex flex-col p-10 lg:w-10/12 mx-auto">
       <div className="text-3xl text-center md:text-left">
         Social Media Services
       </div>
       <div className="flex flex-col md:flex-row my-10">
 
-        <div>
+        <div className="">
           <Image
-            className="w-auto h-auto rounded-2xl m-auto"
+            className="w-auto h-auto rounded-2xl"
             src="/social_services.jpg"
             alt="Close up image of phone on Social Media Application"
-            width="550"
-            height="550"
+            width="600"
+            height="600"
           />
 
         </div>
@@ -69,13 +69,13 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
       </div>
       <div className="flex flex-col md:flex-row-reverse my-10">
 
-      <div>
+      <div className="">
           <Image
-            className="w-auto h-auto rounded-2xl mx-auto"
+            className="w-auto h-auto rounded-2xl"
             src="/web_dev_services.jpg"
             alt="Close up image of apple computer displaying javascript code"
-            width="550"
-            height="550"
+            width="600"
+            height="600"
           />
         </div>
         <div className="flex flex-col md:w-full justify-center text-center md:text-left">
@@ -99,13 +99,13 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
       </div>
       <div className="flex flex-col md:flex-row my-10">
 
-        <div>
+        <div className="">
           <Image
-            className="w-auto h-auto rounded-2xl mx-auto"
+            className="w-auto h-auto rounded-2xl"
             src="/business_services.jpg"
             alt="Close up image of whiteboard with sticky notes"
-            width="550"
-            height="550"
+            width="600"
+            height="600"
           />
 
         </div>
