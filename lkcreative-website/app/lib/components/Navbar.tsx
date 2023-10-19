@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const currentRoute = usePathname();
   const selected = 'text-customPlum'
-  const notSelected = 'text-customEgg'
+  const notSelected = 'text-customEgg underline'
 
   return (
     <>

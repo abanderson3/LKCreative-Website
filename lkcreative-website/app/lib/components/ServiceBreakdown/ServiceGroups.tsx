@@ -34,23 +34,23 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
 
   return (
     <>
-    <div className="flex flex-col p-10 ">
-      <div className="">
+    <div className="flex flex-col p-10">
+      <div className="text-3xl text-center md:text-left">
         Social Media Services
       </div>
-      <div className="flex flex-col md:flex-row my-5">
+      <div className="flex flex-col md:flex-row my-10">
 
         <div>
           <Image
-            className="w-auto h-auto"
+            className="w-auto h-auto rounded-2xl m-auto"
             src="/social_services.jpg"
             alt="Close up image of phone on Social Media Application"
-            width="400"
-            height="400"
+            width="550"
+            height="550"
           />
 
         </div>
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col md:w-full md:text-left justify-center text-center">
           {servicesData.socialMediaServices.map((service, index) => (
             <div
               key={index}
@@ -64,21 +64,21 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
         </div>
       </div>
 
-      <div className="md:text-right">
+      <div className="text-3xl text-center md:text-right">
         Website Design/Development
       </div>
-      <div className="flex flex-col md:flex-row-reverse my-5">
+      <div className="flex flex-col md:flex-row-reverse my-10">
 
       <div>
           <Image
-            className="w-auto h-auto"
+            className="w-auto h-auto rounded-2xl mx-auto"
             src="/web_dev_services.jpg"
             alt="Close up image of apple computer displaying javascript code"
-            width="400"
-            height="400"
+            width="550"
+            height="550"
           />
         </div>
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col md:w-full justify-center text-center md:text-left">
           {servicesData.webDevServices.map((service, index) => (
             <div
               key={index}
@@ -94,23 +94,23 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
 
       </div>
 
-      <div className="">
+      <div className="text-3xl text-center md:text-left">
         Business Services
       </div>
-      <div className="flex flex-col md:flex-row my-5">
+      <div className="flex flex-col md:flex-row my-10">
 
         <div>
           <Image
-            className="w-auto h-auto"
+            className="w-auto h-auto rounded-2xl mx-auto"
             src="/business_services.jpg"
             alt="Close up image of whiteboard with sticky notes"
-            width="400"
-            height="400"
+            width="550"
+            height="550"
           />
 
         </div>
 
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col md:w-full justify-center text-center md:text-left">
           {servicesData.businessServices.map((service, index) => (
             <div
               key={index}

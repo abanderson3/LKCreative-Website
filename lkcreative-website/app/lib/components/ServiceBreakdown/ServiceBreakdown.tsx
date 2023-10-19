@@ -34,15 +34,18 @@ const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
   return (
     <>
     <motion.div
-      className="border border-black"
+      className="border border-black rounded-lg p-2 m-1 "
     >
       <motion.header
         initial={false}
         animate={{ backgroundColor: expanded ? "" : "" }}
         onClick={onClick}
-        className="cursor-pointer"
+        className="cursor-pointer text-xl flex justify-between items-center"
       >
         {serviceList.service}
+        <div className="text-3xl">
+          {expanded ? "-" : "+"}
+        </div>
       </motion.header>
 
       <AnimatePresence initial={false}>
@@ -53,8 +56,8 @@ const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
             animate="open"
             exit="collapsed"
             variants={accordionVariant}
-            transition={{duration: 1.0, ease: [0.04, 0.62, 0.23, 0.98]}}
-            className=""
+            transition={{duration: 1.0, ease:"linear"}}
+            className="m-4"
           >
             {serviceList.description}
           </motion.section>
