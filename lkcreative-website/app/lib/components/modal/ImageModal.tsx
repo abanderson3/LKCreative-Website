@@ -32,13 +32,13 @@ const dropIn = {
   }
 }
 
-const Modal: FC<ModalProps> = ({ handleClose, children }) => {
+const ImageModal: FC<ModalProps> = ({ handleClose, children }) => {
 
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="mx-6 my-12 overflow-y-auto items-center max-w-6xl sm:my-8 md:my-14 lg:my-16 xl:my-32 "
+        className="mx-6 overflow-y-auto items-center max-w-6xl sm:my-8 md:my-14 lg:my-16 xl:my-32 h-fit my-auto"
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -58,4 +58,4 @@ const Modal: FC<ModalProps> = ({ handleClose, children }) => {
   )
 }
 
-export default Modal
+export default ImageModal

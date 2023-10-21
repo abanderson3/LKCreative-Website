@@ -76,7 +76,7 @@ const imageData = [
   },
 
   {
-    id: 10,
+    id: 9,
     src: '/LKCPosts/4.png',
     alt: 'Graphic produced by LK Creative. ',
     width: 400,
@@ -86,7 +86,7 @@ const imageData = [
   },
 
   {
-    id: 11,
+    id: 10,
     src: '/kimPosts/1.png',
     alt: 'Graphic produced by LK Creative for Kim Zander. Kim Zander top producer in sales 2022 perdomo group.',
     width: 400,
@@ -95,7 +95,7 @@ const imageData = [
 
   },
   {
-    id: 12,
+    id: 11,
     src: '/upworkPortfolio/3.png',
     alt: 'Graphic designed by LK Creative for Broadway imagined. Free Class. Virtual strength and condition with leslie. Thursday Febrary 3 from 7:15-8:15 PM EST. Sign up at www.broadwayimagined.com.',
     width: 400,
@@ -104,7 +104,7 @@ const imageData = [
 
   },
   {
-    id: 13,
+    id: 12,
     src: '/upworkPortfolio/2.png',
     alt: 'Graphic designed by LK Creative for broadway imagined. Funny Girl. Congratulations to broadway imagined\'s own Leslie donna flesner. Joining the ensemble!. Previews begin march 26.',
     width: 400,
