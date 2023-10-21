@@ -16,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({title, description}) => {
     <motion.div
       layout
       whileHover={{scale: 1.05}}
-      className="border flex-column border-black bg-customEgg rounded-2xl shadow-xl mx-auto snap-always snap-center flex-none h-full w-48 lg:w-68 md:w-60"
+      className="border flex-column border-black bg-white rounded-2xl shadow-xl mx-auto snap-always snap-center flex-none h-full w-48 lg:w-68 md:w-60"
       // initial={{ opacity: 0, scale: 0, x:-300}}
       // animate={{ opacity: 1, scale: 1, x:0 }}
     >

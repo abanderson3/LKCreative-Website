@@ -34,7 +34,6 @@ const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
   return (
     <>
     <motion.div
-
       className="border border-black rounded-lg p-1 m-1 "
     >
       <motion.header
@@ -45,9 +44,11 @@ const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
         className="cursor-pointer text-xl flex justify-between items-center"
       >
         {serviceList.service}
-        <div className="text-3xl">
+        <motion.div
+          className="text-3xl"
+        >
           {expanded ? "-" : "+"}
-        </div>
+        </motion.div>
       </motion.header>
 
       <AnimatePresence initial={false}>

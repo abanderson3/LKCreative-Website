@@ -1,11 +1,15 @@
 import Image from "next/image";
 
-const HeroAnimation = () => {
+const LogoAnimation = () => {
+
+  /* background test for logo:
+    bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-violet-100 to-purple-200
+  */
 
   return (
     <>
       <Image
-        className="border-4 border-white rounded-full shadow-2xl"
+        className="border-4 border-white  rounded-full shadow-2xl"
         src="./LKCA_logo.svg"
         alt="LKCA_logo"
         width="300"
@@ -87,4 +91,4 @@ const HeroAnimation = () => {
   )
 }
 
-export default HeroAnimation
+export default LogoAnimation

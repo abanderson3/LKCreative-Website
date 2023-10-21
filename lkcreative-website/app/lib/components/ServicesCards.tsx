@@ -35,9 +35,9 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
   }
 
   return (
-    <div className=" w-full bg-slate-200">
+    <div className=" w-full ">
       <motion.div
-        className="flex justify-center text-4xl italic font-josefine py-3 shadow-lg"
+        className="flex justify-center text-4xl italic font-light font-josefine py-3 shadow-md"
       >
         Services
       </motion.div>
