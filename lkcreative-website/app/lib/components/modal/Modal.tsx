@@ -1,12 +1,13 @@
 "use client"
 import { motion } from "framer-motion"
 import Backdrop from "./Backdrop"
-import { FC } from "react"
+import { ComponentElement, FC } from "react"
 import Survey from "../survey/Survey"
 
 interface ModalProps {
   modalOpen: boolean,
   handleClose: () => void,
+  children: ComponentElement<any, any>
   // text: any
 }
 
@@ -31,7 +32,7 @@ const dropIn = {
   }
 }
 
-const Modal: FC<ModalProps> = ({ handleClose }) => {
+const Modal: FC<ModalProps> = ({ handleClose, children }) => {
 
   return (
     <Backdrop onClick={handleClose}>
@@ -51,7 +52,7 @@ const Modal: FC<ModalProps> = ({ handleClose }) => {
         >
           X
         </motion.button>
-        <Survey handleClose={handleClose}/>
+        {children}
       </motion.div>
     </Backdrop>
   )

@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react";
 import Modal from "../modal/Modal";
+import Survey from "./Survey";
 
 const SurveyButton = () => {
   const [ modalOpen, setModalOpen ] = useState(false);
@@ -24,7 +25,12 @@ const SurveyButton = () => {
         mode="wait"
         onExitComplete={() => null}
       >
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        {modalOpen && <Modal
+          modalOpen={modalOpen}
+          handleClose={close}
+        >
+          <Survey handleClose={close}/>
+        </Modal>}
       </AnimatePresence>
     </div>
   )

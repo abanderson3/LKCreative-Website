@@ -60,7 +60,7 @@ const Survey: FC<SurveyProps> = ({handleClose}) => {
   return (
     <form
       onSubmit={handleSurveySubmit}
-      className="border border-black flex flex-col justify-center text-center p-6 bg-customEgg rounded-2xl"
+      className="border border-black flex flex-col justify-center text-center p-6 bg-white rounded-2xl"
     >
       <div className="">
         <div className={questionStyle}>
