@@ -31,14 +31,19 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
     ]
   }
 
+  // attempt at circular background element:     <div className=" -z-10 h-116 w-116 rounded-full bg-slate-200 -translate-x-32 -translate-y-20 absolute"/>
 
   return (
     <>
     <div className="flex flex-col p-10 lg:w-10/12 mx-auto">
+{/*
+      <div className=" -z-10 h-100 w-100 sm:h-116 sm:w-116 rounded-full bg-slate-200 sm:-translate-x-32 sm:-translate-y-14 md:-translate-x-36 md:-translate-y-20 invisible sm:visible sm:absolute absolute"/> */}
       <div className="text-3xl text-center md:text-left">
+
         Social Media Services
       </div>
       <div className="flex flex-col md:flex-row my-10">
+
 
         <div className="">
           <Image
@@ -64,8 +69,9 @@ const ServiceGroups: FC<ServiceGroupsProps> = ({}) => {
         </div>
       </div>
 
+      {/* <div className=" -z-10 h-100 w-100 sm:h-116 sm:w-116 rounded-full bg-slate-200 sm:-translate-x-32 sm:-translate-y-36 md:-translate-x-12 md:translate-y-80 invisible sm:visible sm:absolute absolute"/> */}
       <div className="text-3xl text-center md:text-right">
-        Website Design/Development
+        Web Development
       </div>
       <div className="flex flex-col md:flex-row-reverse my-10">
 

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
 
@@ -10,22 +11,29 @@ const Navbar = () => {
 
   const currentRoute = usePathname();
   const selected = 'text-customPlum'
-  const notSelected = 'text-customEgg underline'
+  const notSelected = 'text-customEgg border-b-2'
 
   return (
     <>
 
-      <nav className="flex bg-customMint justify-end p-4 shadow-xl">
-        <div className='absolute left-0 -top-1'>
-        <Image
-            className=""
-            src="./LKCA_logo.svg"
-            alt="LKCA_logo"
-            width="75"
-            height="75"
-        />
-        </div>
-        <ol className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+      <nav className="flex bg-customMint justify-end p-6 shadow-xl">
+        <motion.div
+          className='absolute left-0 top-0'
+          whileHover={{}}
+        >
+          <Link
+            href="/"
+          >
+            <Image
+                className=""
+                src="./LKCA_logo.svg"
+                alt="LKCA_logo"
+                width="85"
+                height="85"
+            />
+          </Link>
+        </motion.div>
+        <ol className="font-medium text-lg flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li><Link className={ currentRoute === '/' ? notSelected : selected } href="/">Home</Link></li>
           <li><Link className={ currentRoute === '/services' ? notSelected : selected } href="/services">Services</Link></li>
           {/* <li><Link className={ currentRoute === '/portfolio' ? notSelected : selected } href="/portfolio">Portfolio</Link></li> */}

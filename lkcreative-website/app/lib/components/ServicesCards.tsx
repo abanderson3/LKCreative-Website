@@ -35,9 +35,9 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
   }
 
   return (
-    <div className=" w-full ">
+    <div className=" w-full bg-gradient-to-br from-white from-40% to-rose-50">
       <motion.div
-        className="flex justify-center text-4xl sm:text-5xl italic font-light font-josefine py-3 shadow-md"
+        className="flex justify-center text-4xl sm:text-5xl italic font-light font-josefine p-4 shadow-md"
       >
         Services
       </motion.div>
@@ -45,7 +45,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
       <motion.div
         layout
         ref={ref}
-        className="flex flex-nowrap gap-8 px-6 mx-3 snap-x snap-proximity overflow-hidden overflow-x-auto py-4 my-3 h-80 lg:mt-10 lg:pt-5 lg:pb-16 lg:mx-36 lg:justify-between lg:h-100 lg:snap-none md:h-96 md:mt-4 md:mx-20 md:snap-none sm:mx-12"
+        className="flex flex-nowrap gap-8 px-6 mx-3 snap-x snap-proximity overflow-hidden overflow-x-auto py-4 h-80 lg:mt-10 lg:pt-5 lg:pb-16 lg:mx-36 lg:justify-between lg:h-100 lg:snap-none md:h-96 md:mt-4 md:mx-20 md:snap-none sm:mx-12"
         variants={cardAnimation}
         initial="hidden"
         animate="visible"

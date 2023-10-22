@@ -29,6 +29,7 @@ module.exports = {
         '100': '28rem',
         '116': '30rem',
         '128': '32rem',
+        '158': '50rem'
       },
       fontFamily: {
         lora: ['var(--font-lora)'],

@@ -48,16 +48,16 @@ const ImageGallery: FC<ImageGalleryProps> = ({}) => {
 
   return (
     <motion.div
-      className="flex justify-center flex-col items-center"
+      className="flex justify-center flex-col items-center bg-gradient-to-bl from-white from-40% to-purple-100 to-90%"
     >
       <div
-        className="font-josefine text-4xl sm:text-5xl font-light my-4 italic shadow-md w-full "
+        className="font-josefine text-4xl sm:text-5xl font-light italic shadow-md w-full h-full p-4"
       >
         Social Media Work
       </div>
       <motion.div
         variants={galleryAnimation}
-        className="w-11/12 md:w-10/12 sm:m-6 md:my-16 my-12 lg:mx-28 lg:columns-4 columns-3"
+        className="w-10/12 mx-auto md:w-10/12 md:my-12 my-8 lg:mx-28 lg:columns-4 columns-3 gap-1"
         initial="hidden"
         animate="visible"
       >
@@ -71,7 +71,7 @@ const ImageGallery: FC<ImageGalleryProps> = ({}) => {
             key={image.id}
           >
             <Image
-              className="h-auto w-auto"
+              className=""
               onClick={() => {
                 modalOpen ? close() : open()
                 setSelectedImage({
