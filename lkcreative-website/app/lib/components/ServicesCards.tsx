@@ -35,7 +35,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({}) => {
   }
 
   return (
-    <div className=" w-full bg-gradient-to-br from-white from-40% to-rose-50">
+    <div className=" w-full bg-gradient-to-b from-purple-50 from-20% to-white to-60%">
       <motion.div
         className="flex justify-center text-4xl sm:text-5xl italic font-light font-josefine p-4 shadow-md"
       >

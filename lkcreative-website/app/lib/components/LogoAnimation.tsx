@@ -9,7 +9,7 @@ const LogoAnimation = () => {
   return (
     <>
       <Image
-        className="border-4 border-white rounded-full shadow-2xl"
+        className="border-4 border-white rounded-full shadow-2xl scale-105"
         src="./LKCA_logo.svg"
         alt="LKCA_logo"
         width="300"

@@ -16,8 +16,8 @@ const IntroText: React.FC<IntroTextProps> = ({sequence, cursor}) => {
 
   return (
     <main className=" md:h-128">
-      <div className="flex justify-center h-72 pt-32 pb-5 lg:py-36 md:py-32 sm:py-30 ">
-        <div className="px-8 font-josefine text-5xl text-right md:text-center font-light italic lg:text-7xl lg:px-10 lg:h-36 md:text-6xl md:h-40 sm:text-5xl w-full">
+      <div className="flex justify-center h-72 pt-36 pb-5 lg:py-36 md:py-32 sm:py-30 ">
+        <div className="pr-8 font-josefine text-5xl text-right md:text-center font-light italic lg:text-7xl lg:px-10 lg:h-36 md:text-6xl md:h-40 sm:text-5xl w-full">
 
           <TypeAnimation
             sequence={sequence}

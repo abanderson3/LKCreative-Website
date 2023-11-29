@@ -54,13 +54,16 @@ const ServiceBreakdown: FC<ServiceBreakdownProps> = ({serviceList}) => {
       <AnimatePresence initial={false}>
         {expanded && (
           <motion.section
+            layout
+            style={{margin: 5}}
             key="content"
             initial="collapsed"
             animate="open"
             exit="collapsed"
             variants={accordionVariant}
-            transition={{duration: 1.0, ease:"linear"}}
-            className="m-4"
+            transition={{layout: {duration: 0.85}, ease:"linear"}}
+
+
           >
             {serviceList.description}
           </motion.section>

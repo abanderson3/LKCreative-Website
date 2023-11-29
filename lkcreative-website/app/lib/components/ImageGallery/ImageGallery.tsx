@@ -48,7 +48,7 @@ const ImageGallery: FC<ImageGalleryProps> = ({}) => {
 
   return (
     <motion.div
-      className="flex justify-center flex-col items-center bg-gradient-to-bl from-white from-40% to-purple-100 to-90%"
+      className="flex justify-center flex-col items-center bg-gradient-to-b from-white from-40% to-purple-50 to-90%"
     >
       <div
         className="font-josefine text-4xl sm:text-5xl font-light italic shadow-md w-full h-full p-4"
@@ -100,14 +100,24 @@ const ImageGallery: FC<ImageGalleryProps> = ({}) => {
           modalOpen={modalOpen}
           handleClose={close}
         >
+        <div
+          className="flex flex-col bg-white justify-center align-middle items-center p-4 pt-8"
+        >
             <Image
-              className=""
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              height='500'
-              width="500"
-            />
+                className=""
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                height='500'
+                width="500"
+              />
 
+          <div
+            className="max-w-sm font-josefine p-3"
+          >
+            {selectedImage.description}
+          </div>
+
+        </div>
 
         </ImageModal>}
       </AnimatePresence>
