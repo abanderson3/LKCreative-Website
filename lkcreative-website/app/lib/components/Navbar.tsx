@@ -24,7 +24,10 @@ const Navbar = () => {
   const notSelectedLink = "text-white border-b-2"
 
   const expandedBurgerStyle = "w-3/4 mx-auto md:w-auto h-full md:flex flex flex-col"
-  const collapsedBurgerStyle = "hidden w-full md:w-auto md:flex "
+  const collapsedBurgerStyle = "hidden w-full md:w-auto md:flex"
+
+  const collapsedBackdropStyle = "hidden w-screen h-screen absolute"
+  const expandedBackdropStyle = "w-screen h-screen absolute"
 
   useEffect(() => {
     setExpanded(false)
@@ -32,7 +35,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex md:flex-row-reverse bg-customMint p-6 shadow-xl h-16">
+      <nav className="flex md:flex-row-reverse w-full bg-customMint p-6 shadow-xl h-16">
         <motion.div
           className="absolute left-0 -top-1"
           whileHover={{}}
@@ -49,7 +52,7 @@ const Navbar = () => {
             />
           </Link>
         </motion.div>
-        <div className="absolute right-5">
+        <div className="absolute top-5 right-5">
           <button
             className="md:hidden"
             type="button"
@@ -65,7 +68,7 @@ const Navbar = () => {
         </div>
 
         <div className={expanded === false ? collapsedBurgerStyle : expandedBurgerStyle}>
-          <ol className="font-medium text-lg text-center flex flex-col p-4 md:p-0 mt-12 border border-black rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 z-10 bg-customMint">
+          <ol className="font-medium text-lg text-center flex flex-col p-4 md:p-0 mt-12 border border-black rounded-lg md:flex-row md:space-x-8 md:-mt-1 md:border-0 z-10 bg-customMint">
             <li><Link className={ currentRoute === "/" ? notSelectedLink : selectedLink } href="/">Home</Link></li>
             <li><Link className={ currentRoute === "/services" ? notSelectedLink : selectedLink } href="/services" >Services</Link></li>
             {/* <li><Link className={ currentRoute === "/portfolio" ? notSelectedLink : selectedLink } href="/portfolio">Portfolio</Link></li> */}
@@ -73,6 +76,10 @@ const Navbar = () => {
             <li><Link className={ currentRoute === "/contact" ? notSelectedLink : selectedLink } href="/contact">Contact</Link></li>
           </ol>
         </div>
+        <div
+          onClick={expandNavClick}
+          className={expanded === false ? collapsedBackdropStyle : expandedBackdropStyle }
+        />
 
       </nav>
     </>
